@@ -1,0 +1,37 @@
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                                   Irssi                                    //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+Action                          Command                 Shortcut
+------------------------------- ----------------------- ----------------
+Switch server                                           Ctrl+X
+Go to window #                  /window #               Alt+#
+Reconnect after timeout         /reconnect
+List the users in the chan      /names
+List the channels               /list
+
+Horizontal line (cstm.)         /hr
+
+                                /join
+                                /part
+                                /quit
+
+Split with window #             /win show #
+Hide splitted window #          /win stick # off 
+                                  -then- /win hide #
+
+Resize current window           /win grow [lines#]
+                                /win shrink [lines#]
+                                /win size lines#
+
+Once splitted, move window      /window move up
+                                /win[dow] move down
+
+
+/////////////////////////////////////////////////////////////////////////////¤//

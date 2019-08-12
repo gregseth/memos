@@ -1,0 +1,114 @@
+
+--------------------------------------------------------------------[ Diablo ]--
+
+  Name                  Message
+  ----                  -------
+  Abandoned Shrine      The hands of men may be guided by fate
+  Creepy Shrine         Strength is bolstered by heavenly faith
+  Cryptic Shrine        Arcane power brings destruction
+  Divine Shrine         Drink and be Refreshed
+  Eerie Shrine          Knowledge and wisdom at the cost of self
+  Eldritch Shrine       Crimson and azure become like the sun
+  Enchanted Shrine      Magic is not always what it seems
+  Fascinating Shrine    Intensity comes at the cost of wisdom
+  Glimmering Shrine     Mysteries are revealed in the light of reason
+  Gloomy Shrine¹        Those who defend seldom attack
+  Hidden Shrine         New strength is forged through destruction
+  Holy Shrine           Where ever you go, there you are
+  Magical Shrine        While the spirit is vigilant the body thrives
+  Mysterious Shrine     Some are weakened while one grows strong
+  Ornate Shrine         Salvation comes at the cost of Wisdom
+  Quiet Shrine          The essence of life flows from within
+  Religious Shrine      Time cannot diminish the power of steel
+  Sacred Shrine         Energy comes at the cost of wisdom
+  Secluded Shrine       The way is made clear when viewed from above
+  Spiritual Shrine      Riches abound when least expected
+  Spooky Shrine         Where avarice fails, patience brings reward   (user)
+                        Blessed by a benevolent companion             (others)
+  Stone Shrine          The Power of mana refocused renews
+  Tainted               Those who are last may yet be first           (user)
+                        Generosity brings its own reward              (others)
+  Thaumaturgic Shrine   What was once opened is now closed
+  Weird Shrine          The sword of justice is quick and sharp
+
+-----------------------------------------------------------------[ Starcraft ]--
+
+  Code                           Effect
+  ----                           ------
+  show me the money              Minerals and gas increased by 10,000
+  whats mine is mine             Minerals increased by 500
+  breathe deep                   Vespene gas increased by 500
+  something for nothing          Everything upgraded
+  operation cwal                 Faster building and instant upgrades
+  the gathering                  Unlimited psionic ability
+  power overwhelming             Indestructible buildings and ships
+  war aint what it used to be    Remove fog of war
+  food for thought               Ignore supply limit when building units
+  black sheep wall               Full map
+  noglues                        Opponent has no psionics
+  modify the phase variance      Build anything
+  medieval man                   Free upgrades to units
+  there is no cow level          Mission skip
+  ophelia                        Enable mission select
+  terran                         Terran mission select
+  zerg                           Zerg mission select
+  protoss                        Protoss mission select
+  staying alive                  Continue after mission completed
+  man over game                  Win game
+  game over man                  Lose game
+
+--------------------------------------------------------------[ Ace Combat 2 ]--
+
+  > Codename STFS:Scarface
+
+    >> Missions
+
+        1: Gambit
+        2: Easy Money
+        3: City On Fire
+      4.1: Tin Castle
+      4.2: Opera House
+        5: Greased Lightning
+      6.1: Midnight Assassin
+      6.2: Bear Tracks
+        7: Sledgehammer
+      8.1: Rising High
+      8.2: Cuckoo's Nest
+        9: Swordsmith
+       10: Toy Box
+       11: Seagull
+       12: One Night Stand
+       13: Power Play
+
+           ["A"LPHAVILLE]              ["B"ELLISIMA]
+       14: El Dorado               14: Dark Star
+       15: St. Elmo's Fire         15: Dead End
+     16.1: Visiting Hours        16.1: Cavalry
+     16.2: Juggernaut            16.2: Electric Dreams
+       17: Sentinel                17: Final Countdown
+
+       18: Jewel Box
+       19: Kingpin
+       20: Last Resort
+       21: Fighter's Honor
+
+    >> Special Ennemies
+
+      Z.O.E. Fighters..
+        .Captain
+        .Major
+        .Colonel
+        .General
+        .Commander
+      Superfly
+      Ricochet
+      D.Cowboy
+      Razorback
+      Tallman & Metal Sphere
+      Stalker
+      Hangmen
+      Max & Goose
+      Death Rave 2000
+      Dao.Jian.Xiao
+      Fox.Force.Four
+

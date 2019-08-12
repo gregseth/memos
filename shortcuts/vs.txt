@@ -1,0 +1,62 @@
+
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                        Various Custom Accelerators                         //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+
+-------------------------------------------------------------[ Visual Studio ]--
+
+    Sortcut             Description
+	-------             -----------
+    Ctrl *, Ctrl *      Command shell
+    Ctrl ², Ctrl ²      Stop build
+                        
+    Ctrl K, Ctrl K      Set bookmark
+    Ctrl K, Ctrl W      Bookmark list
+                        
+    Ctrl *, Ctrl T      Task list
+    Ctrl *, Ctrl E      Error list
+	                    
+	Crtl E, Ctrl C      Comment line
+	Ctrl E, Ctrl U      Uncomment line
+                        
+    Alt F9              Breakpoint list
+    F7                  Build
+    Ctrl F7             Build current file
+    F5                  Run debug
+                        
+    F12                 Go to definition
+    F12, F12            Go to declaration
+                        
+    Ctrl <              Go back
+    Ctrl >              Go next
+	                    
+	Ctrl ,              Open options window
+	                    
+	Ctrl Space          Complete element
+	Ctrl Shift Space    Show element members
+                        
+    Ctrl Alt L          Solution browser
+                        
+    Alt 1               Search results 1
+    Alt Shift 1         Search results 2
+    Alt 2               Output
+    Alt 3 (dbg)         Spy
+    Alt 4 (dbg)         Locals
+    Alt 5 (dbg)         Registers
+    Alt 6 (dbg)         Memory 1
+    Alt 7 (dbg)         Call stack
+    Alt 8 (dbg)         Assembly
+                        
+                        
+    Ctrl F              Find in current document
+    Ctrl Shift F        Find in documents
+    Ctrl H              Replace in current document
+    Ctrl Shift H        Replace in documents
+	
+	
+/////////////////////////////////////////////////////////////////////////////¤//

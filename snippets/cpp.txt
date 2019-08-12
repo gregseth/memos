@@ -1,0 +1,215 @@
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                             C++ Cheat Sheet                                //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+--------------------------------------------------------------[ Preprocessor ]--
+
+// Stringification:
+#define STR(s) #s
+
+// Concatenation:
+#define CONCAT(x, y) x ## y
+
+// Example
+// with...
+struct command
+{
+  char *name;
+  void (*function) (void);
+};
+#define COMMAND(NAME)  { #NAME, NAME ## _command }
+
+// this...
+struct command commands[] =
+{
+  COMMAND (quit),
+  COMMAND (help)
+};
+
+// expands to:
+struct command commands[] =
+{
+  { "quit", quit_command },
+  { "help", help_command }
+};
+
+
+
+
+
+-------------------------------[ CRTP - Curiously Recurring Template Pattern ]--
+
+// It's only a class deriving from a template clas spcialized with itslef.
+
+template <typename T> class Container;
+
+class Item : public Container<Item>
+{
+
+};
+
+
+------------------------------------------------------[ Singleton Base Class ]--
+
+// Singleton template class declaration ////////////////////////////////////////
+template <typename T>
+class Singleton
+{
+protected:
+    Singleton() {}
+
+private:
+    static T* _This;
+
+public:
+    static T* get();
+    static void discard();
+};
+
+// Singleton template class definition /////////////////////////////////////////
+template <typename T>
+T* Singleton<T>::_This = NULL;
+
+template <typename T>
+T* Singleton<T>::get()
+{
+    if (_This == NULL)
+    {
+        _This = new T;
+    }
+
+    return _This;
+}
+
+template <typename T>
+void Singleton<T>::discard()
+{
+    delete _This;
+    _This = NULL;
+}
+
+// Usage:
+class ASingleClass : public Singleton<ASingleClass>
+{
+    friend class Singleton<ASingleClass>;
+private:
+    ASingleClass() {}
+
+};
+
+
+---------------------------------------------------------------------[ PIMPL ]--
+
+// Pointer to implementation aka d-pointer, aka opaque pointer, is used
+// to deport the implementation of the data structure of a class to the .cpp
+// file, making it invisible when used as a library and _binary compatible_
+// with every previous version.
+
+// in the header file
+class Handle
+{
+    struct HandleData; // not defined here
+    HandleData* _d;
+
+public:
+    Handle();
+    Handle(Handle const &copy_);
+    ~Handle();
+    Handle &operator(Handle other_);
+};
+
+// in the source file
+struct Handle::HandleData
+{
+    // definition goes here.
+};
+
+Handle::Handle()
+: _d( new HandleData )
+{
+    // do nothing.
+}
+
+Handle::Handle(Handle const &copy_)
+: _d( new HandleData(*copy_._d) )
+{
+    // do nothing.
+}
+
+Handle::~Handle()
+{
+    delete _d;
+}
+
+Handle &Hendle::operator=(Handle other_)
+{
+    std::swap(*this, other_);
+    return *this;
+}
+
+  [ links ]
+    http://en.wikipedia.org/wiki/Opaque_pointer
+
+-------------------------------------------------------[ Copy and Swap Idiom ]--
+
+//
+
+class Thing
+{
+    Thing() {}
+
+    ~Thing()
+    {
+        // delete
+    }
+
+    Thing(Thing const &other_)
+    {
+        // Impl.
+    }
+
+    Thing &operator=(Thing other_)
+    {
+        swap(*this, other);
+        return *this;
+    }
+
+    friend void swap(Thing &a, Thing &b)
+    {
+        using std:swap;
+
+        // for each data member do: swap(a._item, b._item);
+    }
+};
+
+
+  [ links ]
+    http://stackoverflow.com/questions/3279543
+
+
+-------------------------------------------[ ADL - Argument Dependent Lookup ]--
+
+
+// ADL applies to the lookup of an unqualified function name depending on the
+// types of the arguments given to the function call.
+//   eg:
+
+namespace NS
+{
+    class A {};
+    void f( A *&, int ) {}
+}
+int main()
+{
+    NS::A *a;
+    f( a, 0 );    //calls NS::f
+}
+
+  [ links ]
+    http://en.wikipedia.org/wiki/Argument-dependent_name_lookup
+
+

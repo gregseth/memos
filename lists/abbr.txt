@@ -1,0 +1,47 @@
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                                Acronyms                                    //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+Abbr.    Long version
+-----    ------------
+
+  help forums
+  -----------
+IIRC     if I read correctly
+              recall
+AFAIx    as far as I...
+    R     ... recall
+    K     ... know
+FWIW     for what it's worth
+FTW      for the win
+FTFY     fixed that for you
+LMGFY    let me google that for you
+OTOH     on the other hand
+POV      point of view
+RTFA     read the fucking article
+
+  general
+  -------
+BTW      by the way
+LMFAO    laughing my fucking ass off
+LFMAO    lesbians fingering my asshole
+
+  tech
+  ----
+RAII     resource acquisition is initialisation
+RTTI     run-time type information
+PIMPL    pointer to implementation (the only data member of a class is a
+         pointer to a private class).
+POD      plain old data (C++)
+POJO     plain old java object
+KISS     keep it simple stupid
+
+
+
+/////////////////////////////////////////////////////////////////////////////¤//

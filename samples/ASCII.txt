@@ -1,0 +1,86 @@
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                                   ASCII                                    //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+
+--------------------------------------------------------------------[ Tables ]--
+
+
+        +------+------+        l"""""""""""""l        ...............
+        |      |      |        l      l      l        :      :      :
+        +------+      |        l""""""l      l        :......:      :
+        |      |      |        l      l      l        :      :      :
+        +------+------+        """""""""""""""        :......:......:
+
+
+
+-----------------------------------------------------------------------[ Art ]--
+
+
+
+                                      ,_-=(!7(7/zs_.             
+                                   .='  ' .`/,/!(=)Zm.           
+                     .._,,._..  ,-`- `,\ ` -` -`\\7//WW.         
+                ,v=~/.-,-\- -!|V-s.)iT-|s|\-.'   `///mK%.        
+              v!`i!-.e]-g`bT/i(/[=.Z/m)K(YNYi..   /-]i44M.       
+            v`/,`|v]-DvLcfZ/eV/iDLN\D/ZK@%8W[Z..   `/d!Z8m       
+           //,c\(2(X/NYNY8]ZZ/bZd\()/\7WY%WKKW)   -'|(][%4.      
+         ,\\i\c(e)WX@WKKZKDKWMZ8(b5/ZK8]Z7%ffVM,   -.Y!bNMi      
+         /-iit5N)KWG%%8%%%%W8%ZWM(8YZvD)XN(@.  [   \]!/GXW[      
+        / ))G8\NMN%W%%%%%%%%%%8KK@WZKYK*ZG5KMi,-   vi[NZGM[      
+       i\!(44Y8K%8%%%**~YZYZ@%%%%%4KWZ/PKN)ZDZ7   c=//WZK%!      
+      ,\v\YtMZW8W%%f`,`.t/bNZZK%%W%%ZXb*K(K5DZ   -c\\/KM48       
+      -|c5PbM4DDW%f  v./c\[tMY8W%PMW%D@KW)Gbf   -/(=ZZKM8[       
+      2(N8YXWK85@K   -'c|K4/KKK%@  V%@@WD8e~  .//ct)8ZK%8`       
+      =)b%]Nd)@KM[  !'\cG!iWYK%%|   !M@KZf    -c\))ZDKW%`        
+      YYKWZGNM4/Pb  '-VscP4]b@W%     'Mf`   -L\///KM(%W!         
+      !KKW4ZK/W7)Z. '/cttbY)DKW%     -`  .',\v)K(5KW%%f          
+      'W)KWKZZg)Z2/,!/L(-DYYb54%  ,,`, -\-/v(((KK5WW%f           
+       \M4NDDKZZ(e!/\7vNTtZd)8\Mi!\-,-/i-v((tKNGN%W%%            
+       'M8M88(Zd))///((|D\tDY\\KK-`/-i(=)KtNNN@W%%%@%[           
+        !8%@KW5KKN4///s(\Pd!ROBY8/=2(/4ZdzKD%K%%%M8@%%           
+         '%%%W%dGNtPK(c\/2\[Z(ttNYZ2NZW8W8K%%%%YKM%M%%.          
+           *%%W%GW5@/%!e]_tZdY()v)ZXMZW%W%%%*5Y]K%ZK%8[          
+            '*%%%%8%8WK\)[/ZmZ/Zi]!/M%%%%@f\ \Y/NNMK%%!          
+              'VM%%%%W%WN5Z/Gt5/b)((cV@f`  - |cZbMKW%%|          
+                 'V*M%%%WZ/ZG\t5((+)L\'-,,/  -)X(NWW%%           
+                      `~`MZ/DZGNZG5(((\,    ,t\\Z)KW%@           
+                         'M8K%8GN8\5(5///]i!v\K)85W%%f           
+                           YWWKKKKWZ8G54X/GGMeK@WM8%@            
+                            !M8%8%48WG@KWYbW%WWW%%%@             
+                              VM%WKWK%8K%%8WWWW%%%@`             
+                                ~*%%%%%%W%%%%%%%@~               
+                                   ~*MM%%%%%%@f`                 
+                                       '''''                     
+
+						
+------------------------------------------------------[ Javascript inception ]--
+
+
+.<script>
+eval(z='p="<"+"pre>"/* ,.oq#+     ,._, */;for(y in n="zw24l6k\
+4e3t4jnt4qj24xh2 x/* =<,m#F^    A W###q. */42kty24wrt413n243n\
+9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\
+r24".split(4)){/* dP      cpq#q##########b, */for(a in t=pars\
+eInt(n[y],36)+/*         p##@###YG=[#######y */(e=x=r=[]))for\
+(r=!r,i=0;t[a/*         d#qg `*PWo##q#######D */]>i;i+=.05)wi\
+th(Math)x-= /*        aem1k.com Q###KWR#### W[ */.05,0<cos(o=\
+new Date/1e3/*      .Q#########Md#.###OP  A@ , */-x/PI)&&(e[~\
+~(32*sin(o)*/* ,    (W#####Xx######.P^     T % */sin(.5+y/7))\
++60] =-~ r);/* #y    `^TqW####P###BP           */for(x=0;122>\
+x;)p+="   *#"/* b.        OQ####x#K           */[e[x++]+e[x++\
+]]||(S=("eval"/* l         `X#####D  ,       */+"(z=\'"+z.spl\
+it(B = "\\\\")./*           G####B" #       */join(B+B).split\
+(Q="\'").join(B+Q/*          VQBP`        */)+Q+")//m1k")[x/2\
++61*y-1]).fontcolor/*         TP         */(/\\w/.test(S)&&"#\
+03B");document.body.innerHTML=p+=B+"\\n"}setTimeout(z)')//
+</script>
+
+http://aem1k.com/world/
+
+
+/////////////////////////////////////////////////////////////////////////////¤//

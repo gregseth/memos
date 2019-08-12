@@ -1,0 +1,163 @@
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                                 Vi / Vim                                   //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+
+  Shortcut              Description
+  --------              -----------
+
+    Moving cursor
+    -------------
+  ^                     Go to first non-blank character of hte line.
+  $                     Go to the EOL.
+  %                     Go to matchig ({[]}), C comment, #preprocessor, ...
+  w (W)                 Jump to the next start of word (exclude punctuation).
+  e (E)                 Jump to the next end of word (exclude punctuation).
+  b (B)                 Jump to the previous end of word (exclude punctuation).
+  ( )                   Move a sentence back (forward).
+  { }                   Move a paragraph back (forward).
+  #                     Go to the next occurrence of the curernt word.
+
+  gg                    Go to the begining of the file.
+  [#]G                  Go to line number # or to the end of the file.
+
+  H                     Go to the top of the screen.
+  M                     Go to the middle of the screen.
+  L                     Go to the bottom of the screen.
+
+  cw                    Delete word and switch to insert mode.
+  cc                    Delete line and switch to insert mode.
+  c$                    Delete to EOL and switch to insert mode.
+
+    Files
+    -----
+  :w [fielname]         Save [as]
+  :e [filename]         Load filename in a new buffer (reload the current file
+                        if no filename specified).
+
+    Mode changes
+    ------------
+  i                     Insert at cursor.
+  a                     Append. (Insert after cursor).
+  A                     Append at EOL.
+  R                     Overwrite mode.
+
+  o                     Opens a new line after the current one.
+  O                     Opens a new line before the current one.
+
+  r                     Overwrite single letter.
+  x                     Delete single letter.
+
+    Copy, paste, delete...
+    ----------------------
+  d[n]d                 Delete lines.
+  y[n]y                 Copy lines.
+  [n]p                  Paste.
+
+  v                     Highlight characters.
+  V                     Highlight lines.
+  d (V)                 Delete the highlighted text.
+  y (V)                 Copies the highlighted text.
+  > (V)                 Indents the highlighted text.
+  < (V)                 Outdents the highlighted text.
+
+    Undo
+    ----
+  u                     Undo.
+  U                     Undo all changes to the line.
+  C-r                   Redo.
+  .                     Repeat last text-changing coaction.
+
+    Search and replace
+    ------------------
+  /expr                 Search for expr in file.
+  ?expr                 Search for expr in file backwards.
+  n                     Next occurence.
+  N                     Previous occurence.
+
+  :[r]s/exp/rep/[giIc]  Search within range r for exp and replaces with rep.
+                     g  Replace all occurrences in the line. Without this,
+                        Vim replaces only the first occurrences in each line.
+                     i  Ignore case for the search pattern.
+                     I  Don't ignore case.
+                     c  Confirm each substitution. Type y to substitute this
+                        match, n to skip this match, a to substitute this
+                        and all the remaining matches ("Yes to all"), and q
+                        to quit substitution.
+
+  :[r]g[!]/expr/cmd     Executes cmd for all the lines (not, if !) matching
+                        expr withing the range r.
+
+    eg: (combo g+s) :g/^baz/s/foo/bar/g replaces each 'foo' by 'bar' in each
+        line starting with 'baz'.
+
+    Ranges
+    ------
+      A range is made of two lines (say n and m) and a separator (,). For each
+  line number, one can specitfy a modifier (+ or -) indicating the ralative
+  deplacement from the matched line (eg: .+5 means "the fifth line after the
+  current one).
+
+    Line numbers:
+  n                     The nth line of the buffer.
+  .                     The current line.
+  $                     The last line.
+  %                     The whole file (ie. 1,$) -- not really a line number
+                        it's a range in itself
+  /expr/                The next line matching expr.
+  ?expr?                The previous line matching expr.
+
+    Buffers and window management
+    -----------------------------
+  :n                    Next file.
+  :p                    Previous file.
+  :bn                   Next buffer.
+  :bp                   Previous buffer.
+  :b#                   Go to buffer # (as listed with :ls).
+  :bd                   Close buffer.
+  :ls                   List open buffers.
+    Indicators (chars in the same column are mutually exclusive):
+    %       the buffer in the current window
+     #      the alternate buffer for ":e #" and CTRL-^
+      a     an active buffer: it is loaded and visible
+      h     a hidden buffer: It is loaded, but currently not
+            displayed in a window |hidden-buffer|
+       -    a buffer with 'modifiable' off
+       =    a readonly buffer
+        +   a modified buffer
+        x   a buffer with read errors
+
+  C-w s                 Split window horizontally.
+  C-w v                 Split window vertically.
+  C-w C-w               Change window.
+  C-w q                 Close window.
+  :res[ize] [+|-]n      Resizes window to n or by n if + or - specified.
+  [n] C-w +|-
+
+    Configuration
+    -------------
+  :coloscheme name      Changes the theme of the syntax coloring.
+  :set colorcolumn=n    Colorize the nth column (right margin), alias: cc.
+
+    Various
+    -------
+  qX<commands>q         Starts the recording of the macro X.
+  @X                    Lauches the execution of macro X.
+  C-n | C-p             Word completion
+  J                     Join with next line.
+  gqgq                  Wrap the current/selected line to textwidth.
+  ~                     Toggle upper and lower case (single letter).
+  !!cmd                 Replace line with the output of cmd.
+  :r file               Insert the content of file after the current line.
+  :set syntax=lang      Set the syntax mode for the language lang.
+  :set fileformat=unix  Converts line endings to\n. Use 'dos' to get \r\n.
+  :set fileencoding=utf-8
+                        Kind of self-explanatory.
+
+
+/////////////////////////////////////////////////////////////////////////////¤//
+

@@ -1,0 +1,869 @@
+  //////////////////////////////////////////////////////////////////////////////
+ //                                                                           //
+//                                                                            //
+//                             Dev Cheat Sheet                                //
+//                                                                            //
+//                                                                           //
+//////////////////////////////////////////////////////////////////////////////
+
+
+---------------------------------------------------------------------[ ASCII ]--
+
+
+   dec hex  oct   bin      esc ctrl code print  description
+   --- ---  ---   ---      --- ---- ---- -----  -----------
+     0 \x00 \00   00000000 \0  ^@   NUL         (Null char.)
+     1 \x01 \01   00000001     ^A   SOH         (Start of Header)
+     2 \x02 \02   00000010     ^B   STX         (Start of Text)
+     3 \x03 \03   00000011     ^C   ETX         (End of Text)
+     4 \x04 \04   00000100     ^D   EOT         (End of Transmission)
+     5 \x05 \05   00000101     ^E   ENQ         (Enquiry)
+     6 \x06 \06   00000110     ^F   ACK         (Acknowledgment)
+     7 \x07 \07   00000111 \a  ^G   BEL         (Bell)
+     8 \x08 \010  00001000 \b  ^H   BS          (Backspace)
+     9 \x09 \011  00001001 \t  ^I   HT   TAB    (Horizontal Tab)
+    10 \x0A \012  00001010 \n  ^J   LF   LF     (Line Feed)
+    11 \x0B \013  00001011 \v  ^K   VT          (Vertical Tab)
+    12 \x0C \014  00001100 \f  ^L   FF          (Form Feed)
+    13 \x0D \015  00001101 \r  ^M   CR   CR     (Carriage Return)
+    14 \x0E \016  00001110     ^N   SO          (Shift Out)
+    15 \x0F \017  00001111     ^O   SI          (Shift In)
+    16 \x10 \020  00010000     ^P   DLE         (Data Link Escape)
+    17 \x11 \021  00010001     ^Q   DC1         (Device Control 1)(XON)
+    18 \x12 \022  00010010     ^R   DC2         (Device Control 2)
+    19 \x13 \023  00010011     ^S   DC3         (Device Control 3)(XOFF)
+    20 \x14 \024  00010100     ^T   DC4         (Device Control 4)
+    21 \x15 \025  00010101     ^U   NAK         (Negative ACK)
+    22 \x16 \026  00010110     ^V   SYN         (Synchronous Idle)
+    23 \x17 \027  00010111     ^W   ETB         (End of Trans. Block)
+    24 \x18 \030  00011000     ^X   CAN         (Cancel)
+    25 \x19 \031  00011001     ^Y   EM          (End of Medium)
+    26 \x1A \032  00011010     ^Z   SUB         (Substitute)
+    27 \x1B \033  00011011     ^[   ESC         (Escape)
+    28 \x1C \034  00011100     ^\   FS          (File Separator)
+    29 \x1D \035  00011101     ^]   GS          (Group Separator)
+    30 \x1E \036  00011110     ^^   RS          (Request to Send)
+    31 \x1F \037  00011111     ^_   US          (Unit Separator)
+    32 \x20 \040  00100000               SPACE  (Space)
+    33 \x21 \041  00100001               !      (exclamation mark)
+    34 \x22 \042  00100010 \"            "      (double quote)
+    35 \x23 \043  00100011               #      (number sign)
+    36 \x24 \044  00100100               $      (dollar sign)
+    37 \x25 \045  00100101               %      (percent)
+    38 \x26 \046  00100110               &      (ampersand)
+    39 \x27 \047  00100111 \'            '      (single quote)
+    40 \x28 \050  00101000               (      (opening parenthesis)
+    41 \x29 \051  00101001               )      (closing parenthesis)
+    42 \x2A \052  00101010               *      (asterisk)
+    43 \x2B \053  00101011               +      (plus)
+    44 \x2C \054  00101100               ,      (comma)
+    45 \x2D \055  00101101               -      (minus or dash)
+    46 \x2E \056  00101110               .      (dot)
+    47 \x2F \057  00101111               /      (forward slash)
+    48 \x30 \060  00110000               0
+    49 \x31 \061  00110001               1
+    50 \x32 \062  00110010               2
+    51 \x33 \063  00110011               3
+    52 \x34 \064  00110100               4
+    53 \x35 \065  00110101               5
+    54 \x36 \066  00110110               6
+    55 \x37 \067  00110111               7
+    56 \x38 \070  00111000               8
+    57 \x39 \071  00111001               9
+    58 \x3A \072  00111010               :      (colon)
+    59 \x3B \073  00111011               ;      (semi-colon)
+    60 \x3C \074  00111100               <      (less than sign)
+    61 \x3D \075  00111101               =      (equal sign)
+    62 \x3E \076  00111110               >      (greater than sign)
+    63 \x3F \077  00111111               ?      (question mark)
+    64 \x40 \0100 01000000               @      (AT symbol)
+    65 \x41 \0101 01000001               A
+    66 \x42 \0102 01000010               B
+    67 \x43 \0103 01000011               C
+    68 \x44 \0104 01000100               D
+    69 \x45 \0105 01000101               E
+    70 \x46 \0106 01000110               F
+    71 \x47 \0107 01000111               G
+    72 \x48 \0110 01001000               H
+    73 \x49 \0111 01001001               I
+    74 \x4A \0112 01001010               J
+    75 \x4B \0113 01001011               K
+    76 \x4C \0114 01001100               L
+    77 \x4D \0115 01001101               M
+    78 \x4E \0116 01001110               N
+    79 \x4F \0117 01001111               O
+    80 \x50 \0120 01010000               P
+    81 \x51 \0121 01010001               Q
+    82 \x52 \0122 01010010               R
+    83 \x53 \0123 01010011               S
+    84 \x54 \0124 01010100               T
+    85 \x55 \0125 01010101               U
+    86 \x56 \0126 01010110               V
+    87 \x57 \0127 01010111               W
+    88 \x58 \0130 01011000               X
+    89 \x59 \0131 01011001               Y
+    90 \x5A \0132 01011010               Z
+    91 \x5B \0133 01011011               [      (opening bracket)
+    92 \x5C \0134 01011100 \\            \      (back slash)
+    93 \x5D \0135 01011101               ]      (closing bracket)
+    94 \x5E \0136 01011110               ^      (caret cirumflex)
+    95 \x5F \0137 01011111               _      (underscore)
+    96 \x60 \0140 01100000               `      (backquote)
+    97 \x61 \0141 01100001               a
+    98 \x62 \0142 01100010               b
+    99 \x63 \0143 01100011               c
+   100 \x64 \0144 01100100               d
+   101 \x65 \0145 01100101               e
+   102 \x66 \0146 01100110               f
+   103 \x67 \0147 01100111               g
+   104 \x68 \0150 01101000               h
+   105 \x69 \0151 01101001               i
+   106 \x6A \0152 01101010               j
+   107 \x6B \0153 01101011               k
+   108 \x6C \0154 01101100               l
+   109 \x6D \0155 01101101               m
+   110 \x6E \0156 01101110               n
+   111 \x6F \0157 01101111               o
+   112 \x70 \0160 01110000               p
+   113 \x71 \0161 01110001               q
+   114 \x72 \0162 01110010               r
+   115 \x73 \0163 01110011               s
+   116 \x74 \0164 01110100               t
+   117 \x75 \0165 01110101               u
+   118 \x76 \0166 01110110               v
+   119 \x77 \0167 01110111               w
+   120 \x78 \0170 01111000               x
+   121 \x79 \0171 01111001               y
+   122 \x7A \0172 01111010               z
+   123 \x7B \0173 01111011               {      (opening brace)
+   124 \x7C \0174 01111100               |      (vertical bar)
+   125 \x7D \0175 01111101               }      (closing brace)
+   126 \x7E \0176 01111110               ~      (tilde)
+   127 \x7F \0177 01111111     ^?   DEL         (delete)
+
+
+
+--------------------------------------------------------------------[ printf ]--
+
+%[flags][width][.precision][length]specifier
+
+specifier    output
+---------    ----
+c            Character
+d or i       Signed decimal integer
+e            Scientific notation (mantise/exponent) using e character
+E            Scientific notation (mantise/exponent) using E character
+f            Decimal floating point
+g            Use the shorter of %e or %f
+G            Use the shorter of %E or %f
+o            Signed octal
+s            String of characters
+u            Unsigned decimal integer
+x            Unsigned hexadecimal integer
+X            Unsigned hexadecimal integer (capital letters)
+p            Pointer address
+n            Nothing printed. The argument must be a pointer to a signed int,
+             where the number of characters written so far is stored.
+%            A % followed by another % character will write % to stdout.
+
+flags        description
+-----        -----------
+-            Left-justify within the given field width; Right justification is
+             the default (see width sub-specifier).
++            Forces to precede the result with a plus or minus sign (+ or -)
+             even for positive numbers. By default, only negative numbers are
+             preceded with a - sign.
+(space)      If no sign is going to be written, a blank space is inserted before
+             the value.
+#            Used with o, x or X specifiers the value is preceeded with 0, 0x or
+             0X respectively for values different than zero.
+             Used with e, E and f, it forces the written output to contain a
+             decimal point even if no digits would follow. By default, if no
+             not removed.
+0            Left-pads the number with zeroes (0) instead of spaces, where
+             padding is specified (see width sub-specifier).
+
+width        description
+-----        -----------
+(number)     Minimum number of characters to be printed. If the value to be
+             printed is shorter than this number, the result is padded with
+             blank spaces. The value is not truncated even if the result is
+             larger.
+*            The width is not specified in the format string, but as an
+             additional integer value argument preceding the argument that
+             has to be formatted.
+
+.precision   description
+----------   -----------
+.number      For integer specifiers (d, i, o, u, x, X): precision specifies the
+             minimum number of digits to be written. If the value to be written
+             is shorter than this number, the result is padded with leading
+             zeros. The value is not truncated even if the result is longer. A
+             precision of 0 means that no character is written for the value 0.
+             For e, E and f specifiers: this is the number of digits to be
+             printed after the decimal point.
+             For g and G specifiers: This is the maximum number of significant
+             digits to be printed.
+             For s: this is the maximum number of characters to be printed. By
+             default all characters are printed until the ending null character
+             is encountered.
+             For c type: it has no effect.
+             When no precision is specified, the default is 1. If the period is
+             specified without an explicit value for precision, 0 is assumed.
+.*           The precision is not specified in the format string, but as an
+             additional integer value argument preceding the argument that has
+             to be formatted.
+
+length       description
+------       -----------
+h            The argument is interpreted as a short int or unsigned short int
+             (only applies to integer specifiers: i, d, o, u, x and X).
+l            The argument is interpreted as a long int or unsigned long int for
+             integer specifiers (i, d, o, u, x and X), and as a wide character
+             or wide character string for specifiers c and s.
+L            The argument is interpreted as a long double (only applies to
+             floating point specifiers: e, E, f, g and G).
+
+  [ Links ]
+
+    http://www.cplusplus.com/reference/clibrary/cstdio/printf
+
+
+
+---------------------------------------------------------------[ Types sizes ]--
+
+type                   bytes  bits range
+----                   -----  ---- -----
+
+unsigned char          1       8   [               0, +255            ]
+signed char            1       8   [            -128, +127            ]
+unsigned short int     2      16   [               0, +32 767         ]  (32Kb)
+short int              2      16   [         -16 384, +16 383         ]  (16kb)
+unsigned int           4      32   [               0, +4 294 967 295  ]  ( 4Gb)
+int                    4      32   [  -2 147 483 648, +2 147 483 647  ]  ( 2Gb)
+long int               4      32   [  -2 147 483 648, +2 147 483 647  ]  ( 2Gb)
+unsigned __int64       8      64   [               0,
+                                          +18 446 744 073 709 551 616 ]  (18Eb)
+__int64                8      64   [ -9 223 372 036 854 775 808,
+                                            9 223 372 036 854 775 808 ]  ( 9Eb)
+
+float                  4      32   ±3.4e ±38  (~7 decimal digits)
+double                 8      64   ±1.7e ±308 (~15 decimal digits)
+long double            12/16  80   Depends of the platform and compiler.
+
+
+  [ Links ]
+
+    http://en.wikipedia.org/wiki/IEEE_754-1985
+    http://en.wikipedia.org/wiki/Long_double
+    <float.h>
+
+
+
+-------------------------------------------------------------------[ RegExes ]--
+
+  quantifiers
+  -----------
+?                : 0 or 1
++                : >= 1
+*                : >= 0
+{n}              : n
+{n,}             : >= n
+{n,m}            : >= n && <= m
+
+  placeholders
+  ------------
+^ ...            : begins with
+... $            : ends with
+
+  groups
+  ------
+...              : litteral
+[ ... ]          : any of
+[^ ... ]         : none of
+( ... )          : capturing group
+( ... | ... )    : either
+(?: ... )        : non capturing group
+(?# ... )        : comment, must not contain a closing parenthesis ')'
+
+  lookaround
+  ----------
+
+(?= ... )        : look ahead
+                     (eg: q(?=u) matches q in question but not in Iraq)
+(?! ... )        : negative look ahead
+                     (eg: q(?!u) matches q in Iraq but not in question)
+
+(?<= ... )       : look behind
+                     (eg: (?<=a)b matches the b in cab but not in debt)
+(?<! ... )       : negative look behind
+                     (eg: (?<!a)b matches the b in debt but not in cab)
+
+Notice: when using lookaround with mutliple candiates (...|...), all the
+        candidates must have the same lnegth.
+
+  character classes
+  -----------------
+
+POSIX      perl  ASCII             description
+-----      ----  -----             -----------
+
+[:alnum:]        [A-Za-z0-9]       Alphanumeric characters
+[:word:]   \w    [A-Za-z0-9_]      Alphanumeric characters plus "_"
+           \W    [^\w]             Non-word character
+[:alpha:]        [A-Za-z]          Alphabetic characters
+[:blank:]        [ \t]             Space and tab
+[:cntrl:]        [\x00-\x1F\x7F]   Control characters
+
+[:digit:]  \d    [0-9]             Digits
+           \D    [^\d]             Non-digit
+[:graph:]        [\x21-\x7E]       Visible characters
+[:lower:]        [a-z]             Lowercase letters
+[:print:]        [\x20-\x7E]       Visible characters and spaces
+[:punct:]        [-!"#$%&amp;'()*+,./:;<=>?@[\\\]^_`{|}~]
+                                   Punctuation characters
+[:space:]  \s    [ \t\r\n\v\f]     Whitespace characters
+           \S    [^\s]             Non-whitespace character
+[:upper:]        [A-Z]             Uppercase letters
+[:xdigit:]       [A-Fa-f0-9]       Hexadecimal digits
+
+           \b                      Word boundary
+           \B                      Non-(word boundary)
+           \A                      Only at beginning of string
+           \Z                      Only at end of string, or before
+                                     newline at the end
+
+           \z                      Only at end of string
+           \G                      Only where previous m//g left off
+                                     (works only with /g)
+
+  [ Links ]
+
+    http://www.regular-expressions.info/quickstart.html
+    http://en.wikipedia.org/wiki/Regular_expression
+    http://www.regex101.com
+
+
+
+----------------------------------------------------------------[ Endianness ]--
+
+  0xFEED1337
+
+        address       0  1  2  3
+     big endian   0x FE ED 13 37   MSB @ lowest address  Motorola, Sparc, ...
+  little endian   0x 37 13 ED FE   LSB @ lowest address  Intel, ...
+
+
+
+--------------------------------------------[ Win32 CRT Debug Heap Internals ]--
+
+    address       desciption                       time
+    -------       ----------                       ----
+
+    0x00000000    NULL
+    0xBAADF00D    not yet allocated memory         after HeapAlloc()
+    0xCCCCCCCC    allocated on stack (/RTCs)       after local var declaration
+    0xCDCDCDCD    clean memory (newly allocated)   after malloc()
+    0xDDDDDDDD    dead memory (freed)              during free()
+    0xFDFDFDFD    fences around memory             malloc()
+    0xFEEEFEEE    freed memory                     after HeapFree()
+    0xABABABAB    win32 heap bookkeeping           anytime before HeapFree()
+
+  [ Links ]
+
+    http://www.nobugs.org/developer/win32/debug_crt_heap.html
+
+
+
+-----------------------------------------------------[ C++ operator priority ]--
+
+  Opérateur         Nom ou signification
+  ---------         --------------------
+
+  ::                Opérateur de résolution de portée
+  []                Opérateur d'accès aux éléments de tableau
+  ()                Opérateur d'appel de fonction
+  type()            Opérateur de transtypage explicite
+  .                 Opérateur de sélection de membre
+  ->                Opérateur de sélection de membre par déréférencement
+  ++                Opérateur d'incrémentation post-fixe
+  --                Opérateur de décrémentation post-fixe
+  new               Opérateur de création dynamique d'objets
+  new[]             Opérateur de création dynamique de tableaux
+  delete            Opérateur de destruction des objets créés dynamiquement
+  delete[]          Opérateur de destruction des tableaux créés dynamiquement
+  ++                Opérateur d'incrémentation préfixe
+  --                Opérateur de décrémentation préfixe
+  *                 Opérateur de déréférencement
+  &                 Opérateur d'adresse
+  +                 Opérateur plus unaire
+  -                 Opérateur négation unaire
+  !                 Opérateur de négation logique
+  ~                 Opérateur de complément à un
+  sizeof            Opérateur de taille d'objet
+  sizeof            Opérateur de taille de type
+  typeid            Opérateur d'identification de type
+  (type)            Opérateur de transtypage
+  const_cast        Opérateur de transtypage de constance
+  dynamic_cast      Opérateur de transtypage dynamique
+  reinterpret_cast  Opérateur de réinterprétation
+  static_cast       Opérateur de transtypage statique
+  .*                Opérateur de sélection de membre par pointeur sur membre
+  ->*               Opérateur de sélection de membre par pointeur sur membre
+                        par déréférencement
+  *                 Opérateur de multiplication
+  /                 Opérateur de division
+  %                 Opérateur de reste de la division entière
+  +                 Opérateur d'addition
+  -                 Opérateur de soustraction
+  <<                Opérateur de décalage à gauche
+  >>                Opérateur de décalage à droite
+  <                 Opérateur d'infériorité
+  >                 Opérateur de supériorité
+  <=                Opérateur d'infériorité ou d'égalité
+  >=                Opérateur de supériorité ou d'égalité
+  ==                Opérateur d'égalité
+  !=                Opérateur d'inégalité
+  &                 Opérateur et binaire
+  ^                 Opérateur ou exclusif binaire
+  |                 Opérateur ou inclusif binaire
+  &&                Opérateur et logique
+  ||                Opérateur ou logique
+  ?:                Opérateur ternaire
+  =                 Opérateur d'affectation
+  *=                Opérateur de multiplication et d'affectation
+  /=                Opérateur de division et d'affectation
+  %=                Opérateur de modulo et d'affectation
+  +=                Opérateur d'addition et d'affectation
+  -=                Opérateur de soustraction et d'affectation
+  <<=               Opérateur de décalage à gauche et d'affectation
+  >>=               Opérateur de décalage à droite et d'affectation
+  &=                Opérateur de et binaire et d'affectation
+  |=                Opérateur de ou inclusif binaire et d'affectation
+  ^=                Opérateur de ou exclusif binaire et d'affectation
+  ,                 Opérateur virgule
+
+
+  [ Links ]
+
+    http://casteyde.christian.free.fr/cpp/cours/online/a9632.html
+
+
+----------------------------------------------------------------[ C++ tricks ]--
+
+  Dictionnary
+  -----------
+
+    l-value : location value
+    r-value : return value
+
+  Undefined behaviors
+  -------------------
+
+    u = (u++); // Can't modify a variable twice between two sequence points.
+    Dereferencing NULL is undefined.
+    Attempting to modify a string literal or other const object during
+      its lifetime.
+
+  Uncommon features
+  -----------------
+
+    new(p) T(a, b); // Instanciates a object of type T at the p address (p
+                    // must be pointing to an allocated space).
+
+  Some thoughts
+  -------------
+
+    An inner class is automatically declared friend to its host:
+
+      class Host {
+        friend class Guest; // not needed
+        class Guest {
+        };
+      };
+
+    Deleting NULL doesn't segfault.
+
+  Templates
+  ---------
+
+    Enforce template specialization for a type subset:
+
+      // Declares (but doesn't define) the generic class Allowed.
+      template<typename T> struct Allowed;
+
+      // Defines the class Allowed for the allowed types.
+      template<> struct Allowed<std::string> { };
+      template<> struct Allowed<short> { };
+
+      // To use, simply inherits from Allowed<T>
+      template<typename T>
+      struct MyClass : private Allowed<T> {
+        // ...
+      };
+
+      MyClass<double> m; // Instanciation with the wrong type is impossible.
+
+  Casts
+  -----
+
+    dynamic_cast
+      Pointers only. Use to cast Base to Derived. NULL pointer is returned if
+      cast fails. Use when you're not sure of the types involved.
+
+    static_cast
+      Any type. No safety check is performed. Use when you know the types
+      involved.
+
+    const_cast
+      Adds or removes the constness on any type. Beware to litterals.
+
+    reinterpret_cast
+      Pointers only. You know what you're doing, right?
+
+
+  [ Links ]
+
+    http://en.wikipedia.org/wiki/Sequence_point
+
+
+-----------------------------------------------------------------[ IP ranges ]--
+
+  IPv4
+  ----
+
+    net address      broadcast         binary prefix         description
+    -----------      ---------         -------------         -----------
+    127.0.0.1/8      127.255.255.255   0111 1111             loopback
+    10.0.0.0/8        10.255.255.255   1010 0000             private
+    172.16.0.0/12    172. 31.255.255   1010 1100 0001        private
+    192.168.0.0/16   192.168.255.255   1100 0000 1010 1000   private
+    224.0.0.0/4      239.255.255.255   1111                  multicast
+
+
+  IPv6
+  ----
+
+    address         binary prefix                        description
+    -----------     -------------                        -----------
+    ::/128          00...0                               unspecified
+    ::1/128         00...1                               loopback
+    fc00::/7        1111110                              unique local unicast
+    fe80::/10       11111110 10                          link local unicast
+    ff00::/8        11111111                             multicast
+    ::ffff:0:0/96                                        mapping IPv4
+    2002::/16       00100000 00000010                    6to4
+    2001:db8::/32   00100000 00000001 00001101 10111000  documentation
+
+
+      eg: 2001:0db8:0000:85a3:0000:0000:ac1f:8001
+          2001:db8:0:85a3:0:0:ac1f:8001
+          2001:db8::85a5:0:0:ac1f:8001
+          2001:db8:0:85a5::ac1f:8001
+          (mapping IPv4) 192.168.1.1 -> ::ffff:C0A8:0101 ou ::ffff:192.168.1.1
+          (6to4)            10.1.2.3 -> 2002:0A01:0203::/48
+
+
+  [ Links ]
+
+    http://fr.wikipedia.org/wiki/Adresse_IPv4
+    http://tools.ietf.org/html/rfc4291
+
+
+
+--------------------------------------------------------------------[ ORACLE ]--
+
+  Remarkable tables (prefixed by USER_ or ALL_ [ == DBA_ ])
+
+    Table name   Description
+    ----------   -----------
+    TAB_PRIVS    Privileges
+    TRIGGERS
+    TABLES
+    SEQUENCES
+    USERS
+    V$*          Settings, where * is for example NLS_PARAMETERS
+
+
+
+-----------------------------------------------------------------------[ UML ]--
+
+  Dependency
+  ----------
+
+  o A has knowledge of B
+
+    +-----+            +-----+
+    |  A  |- - - - - ->|  B  |
+    +-----+            +-----+
+    +-----+            +-----+
+
+    class A {
+    public:
+      void method(B* B_);
+    };
+
+  Association
+  -----------
+
+  o No ownership relation
+  o B's lifecycle independent from A
+
+    +-----+            +-----+
+    |  A  |----------->|  B  |
+    +-----+            +-----+
+    +-----+            +-----+
+
+    class A {
+      B* _pB;
+    };
+
+  Association (Aggrégation)
+  -------------------------
+
+  o A has-a B
+  o B's lifecycle independent from A
+
+    +-----+            +-----+
+    |  A  |<>--------->|  B  |
+    +-----+            +-----+
+    +-----+            +-----+
+
+    class A {
+      B* _pB;
+    };
+
+  Composition
+  -----------
+
+  o A has-a B
+  o A manages B's lifecycle
+
+    +-----+            +-----+
+    |  A  |<#>-------->|  B  |
+    +-----+            +-----+
+    +-----+            +-----+
+
+    class A {
+      B _b;
+    };
+
+  Interface
+  ---------
+
+    +-----+            +-----+      +----------+
+    |  A  |- - ->O-----|  B  |      | <<type>> |
+    +-----+      I     +-----+      |    I     |
+    +-----+            +-----+      +----------+
+                                    +----------+
+    class I {
+    public:
+      virtual void method() =0;
+    };
+    class B : public I {
+      void method();
+    };
+    class A {
+    public:
+      void method(B* B_);
+    };
+
+  Inheritance
+  -----------
+
+    +-----+          +-----+
+    |  B  |          |  I  |
+    +-----+          +-----+
+    +-----+          +-----+
+       A                A
+       |                |
+       |
+       |                |
+       |
+       |                |
+    +-----+          +-----+
+    |  A  |          |  B  |
+    +-----+          +-----+
+    +-----+          +-----+
+
+    class I {
+    public:
+      virtual void method() =0;
+    };
+    class B : public I {
+      void method();
+    };
+    class A : public B {
+    };
+
+
+  [ Links ]
+
+    http://ootips.org/uml-hasa.html
+
+
+-------------------------------------------------[ Microsoft's fucking types ]--
+
+  Type prefix Meaning
+  ----------- -------
+    LP          far(*) pointer
+    P           near(*) pointer
+    C           const
+    U           __unaligned (amd64 & IA64)
+    T           depends on definition of _UNICODE (see TCHAR)
+
+    (*) Legacy from the (not so) good old 16-bit systems.
+        A 'near' pointer was a 16-bit offset into a region of memory, with
+        implicit start address (the implicit start address depended on the
+        context). A 'far' pointer was a 32-bit pointer consisting of a 16-bit
+        'selector' that indirectly determined the start address of the memory
+        region, and a 16-bit offset into that region.
+
+
+  M$ version  Real type                   Condition
+  ----------  ---------                   ---------
+
+    BOOL        int
+    CHAR        char
+    WCHAR       wchar_t
+    TCHAR       wchar_t                     #ifdef _UNICODE
+                char                        #else
+    BYTE        unsigned char
+    WORD        unsigned short
+    DWORD       unsigned long
+    PCH         char*
+    PSTR        char* (NULL terminated)
+    PWCH        wchar_t*
+    PWSTR       wchar_t* (NULL terminated)
+
+    OLECHAR     WCHAR                       #ifndef OLE2ANSI
+                char                        #else
+    LPOLESTR    OLECHAR*                    #ifndef OLE2ANSI
+                LPSTR                       #else
+    BSTR        OLECHAR*
+    HRESULT     int
+
+
+    eg: LPCWSTR : wchar_t const*
+        LPTSTR  : wchar_t* or char* (depending of _UNICODE definition)
+
+
+  [ Links ]
+    http://bytes.com/topic/c/answers/141387-what-difference-between-far-near-pointer
+
+
+-----------------------------------------------------[ Microsoft COM HRESULT ]--
+
+
+                                        1               2
+        0 1 2 3 4 5     8               6               4
+        | | | | | |     |               |               |
+       [S|R|C|N|X|Facility :            |Code                           ]
+    :
+
+    S           Severity. If set, indicates a failure result. If clear,
+                indicates a success result.
+    R           Reserved. If the N bit is clear, this bit MUST be set to 0. If
+                the N bit is set, this bit is defined by the NTSTATUS
+                numbering space.
+    C           Customer. This bit specifies if the value is customer-defined
+                or Microsoft-defined. The bit is set for customer-defined
+                values and clear for Microsoft-defined values.
+    N           If set, indicates that the error code is an NTSTATUS value,
+                except that this bit is set.
+    X           Reserved. SHOULD be set to 0.
+    Facility    An indicator of the source of the error. New facilities are
+                occasionally added by Microsoft.
+    Code        The remainder of the error code.
+
+  [ Links ]
+    http://msdn.microsoft.com/en-us/library/cc231198.aspx
+
+
+---------------------------------------------------[ C# inheritance keywords ]--
+
+
+                   implemented  keyword (derived)
+  keyword (base)   in base      new     override
+  --------------   -----------  ---     --------
+  abstract         N            N       Y
+  virtual          Y            Y       Y
+  none             Y            Y       N
+
+
+---------------------------------------------------------------[ HTTP Status ]--
+
+
+  Code  Description
+  ----  -----------
+
+     temporary reply
+     ---------------
+   100  ok to continue
+   101  server changed protocol
+
+     success
+     -------
+   200  ok
+   201  object created, reason = new URI
+   202  async completion TBS
+   203  partial completion
+   204  no info to return
+   205  request completed, but clear form
+   206  partial GET furfilled
+
+     redirection
+     -----------
+   300  server couldn't decide what to return
+   301  object permanently moved
+   302  object temporarily moved
+   303  redirection with new access method
+   304  if-modified-since was not modified
+   305  redirection to proxy, location header specifies proxy to use
+   307  HTTP/1.1keep same verb
+
+     client request error
+     --------------------
+   400  invalid syntax
+   401  access denied
+   402  payment required
+   403  forbidden
+   404  page not found
+   405  method is not allowed
+   406  no response acceptable to client found
+   407  proxy authentication required
+   408  server timed out waiting for request
+   409  user should resubmit with more info
+   410  the resource is no longer available
+   411  the server refused to accept request w/o a length
+   412  precondition given in request failed
+   413  request entity was too large
+   414  request URI too long
+   415  unsupported media type
+
+     server error
+     ------------
+   500  internal server error
+   501  required not supported
+   502  error response received from gateway
+   503  temporarily overloaded
+   504  timed out waiting for gateway
+   505  HTTP version not supported
+
+
+-----------------------------------------------------------------------[ BOM ]--
+
+
+  Bytes          Encoding Form
+  -----          -------------
+  00 00 FE FF    UTF-32, big-endian
+  FF FE 00 00    UTF-32, little-endian
+  FE FF          UTF-16, big-endian
+  FF FE          UTF-16, little-endian
+  EF BB BF       UTF-8
+
+
+/////////////////////////////////////////////////////////////////////////////¤//
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTE1ODEzNzcyOF19
+-->
