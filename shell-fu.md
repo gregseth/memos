@@ -26,7 +26,7 @@ The same as `cat` but in reverse order (from the las line of the file).
 
 Creates a GUI like environment. See man page.
 
-    nc -l PORT
+    nc -lp PORT
 
 Listens to the PORT, and outputs everything sent to it to stdout.
 
@@ -498,6 +498,6 @@ Shortcuts
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNjk5MDc4NiwxNTA3OTk4MjUwLC0xMz
-Q3NTk5MzE0XX0=
+eyJoaXN0b3J5IjpbMTAzNDI5MDQ0MiwxNTE2OTkwNzg2LDE1MD
+c5OTgyNTAsLTEzNDc1OTkzMTRdfQ==
 -->
