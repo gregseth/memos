@@ -452,13 +452,13 @@ These can be set by echoing `\e[#m<custom_text>\e[0m`
  `\e[n;mH` | CUP  | Moves the cursor to row n and column m (1 based values)
  `\e[n;mf` | HVP  | Moves the cursor to row n and column m (1 based values)
  `\e[nJ`   | ED   | Clears part of the screen:
-           |      |  n=0: from cursor to end of screen
-           |      |  n=1: from beginning of the screen to cursor
-           |      |  n=2: the entire screen
+ .         |      |  n=0: from cursor to end of screen
+ .         |      |  n=1: from beginning of the screen to cursor
+ .         |      |  n=2: the entire screen
  `\e[nK`   | EL   | Clears part of the line:
-           |      |  n=0: from cursor to end of line
-           |      |  n=1: from beginning of the line to cursor
-           |      |  n=2: the entire line
+ .         |      |  n=0: from cursor to end of line
+ .         |      |  n=1: from beginning of the line to cursor
+ .         |      |  n=2: the entire line
  `\e[nS`   | SU   | Scrolls the page by n lines up
  `\e[nT`   | SD   | Scrolls the page by n lines down 
  `\e[s`    | SCP  | Saves cursor position
@@ -470,14 +470,14 @@ Manpages number
 
  Section  | Topic
 ---------:|:----------------------------------------------------
-        1 | Commands available to users.
-        2 | Unix and C system calls.
-        3 | C library routines for C programs.
-        4 | Special file names.
-        5 | File formats and conventions for files used by Unix.
+ 1 | Commands available to users.
+ 2 | Unix and C system calls.
+ 3 | C library routines for C programs.
+  | Special file names.
+  | File formats and conventions for files used by Unix.
         6 | Games.
-        7 | Word processing packages.
-        8 | System administration commands and procedures.
+ 7 | Word processing packages.
+ 8 | System administration commands and procedures.
 
 Shortcuts
 ---------
@@ -498,5 +498,6 @@ Shortcuts
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNzk5ODI1MCwtMTM0NzU5OTMxNF19
+eyJoaXN0b3J5IjpbLTU2OTQ1MDQ4MSwxNTA3OTk4MjUwLC0xMz
+Q3NTk5MzE0XX0=
 -->
