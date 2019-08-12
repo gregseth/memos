@@ -438,7 +438,7 @@ These can be set by echoing `\e[#m<custom_text>\e[0m`
  turquoize    |  96   | 106
  white        |  97   | 107
 
-### ANSI cursor positioning
+### ANSI cursor positioning
 
  Code      | Name | Effect
 :----------|:-----|:------
@@ -468,8 +468,8 @@ These can be set by echoing `\e[#m<custom_text>\e[0m`
 Manpages number
 ---------------
 
- Section# | Topic
----------:|:-----
+ Section  | Topic
+---------:|:----------------------------------------------------
         1 | Commands available to users.
         2 | Unix and C system calls.
         3 | C library routines for C programs.
@@ -498,5 +498,5 @@ Shortcuts
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDc1OTkzMTRdfQ==
+eyJoaXN0b3J5IjpbMTUwNzk5ODI1MCwtMTM0NzU5OTMxNF19
 -->
