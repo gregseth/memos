@@ -470,14 +470,14 @@ Manpages number
 
  Section  | Topic
 ---------:|:----------------------------------------------------
- 1 | Commands available to users.
- 2 | Unix and C system calls.
- 3 | C library routines for C programs.
-  | Special file names.
-  | File formats and conventions for files used by Unix.
-        6 | Games.
- 7 | Word processing packages.
- 8 | System administration commands and procedures.
+ 1        | Commands available to users.
+ 2        | Unix and C system calls.
+ 3        | C library routines for C programs.
+ 4        | Special file names.
+ 5        | File formats and conventions for files used by Unix.
+ 6        | Games.
+ 7        | Word processing packages.
+ 8        | System administration commands and procedures.
 
 Shortcuts
 ---------
@@ -498,6 +498,6 @@ Shortcuts
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2OTQ1MDQ4MSwxNTA3OTk4MjUwLC0xMz
+eyJoaXN0b3J5IjpbLTQ5MTY4NjYzNCwxNTA3OTk4MjUwLC0xMz
 Q3NTk5MzE0XX0=
 -->
