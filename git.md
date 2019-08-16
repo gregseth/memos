@@ -115,16 +115,19 @@ How to…
 
 ```bash
 git branch <topic> D
+```
 
   Then rebase `master`, starting after `B`:
 
 ```bash
 git rebase -i B
+```
 
   Instead of an interactive rebase, it's possible to use the `--onto` option. In this example it makes the commit `B` take the place of `D`, skipping the in-between ones.
 
 ```bash
 git rebase D --onto B
+```
 
 
 ### Undo
@@ -133,11 +136,13 @@ git rebase D --onto B
 
 ```bash
     $ git checkout <commit> <file.ext>
+```
 
   To restore the whole repository as it was in a spcific commit (eg. `HEAD^`):
 
 ```bash
     $ git reset --hard <commit>
+```
 
   To do the same as previously, but keep the local changes and just reset the
 index use `--soft` instead.
@@ -146,6 +151,7 @@ index use `--soft` instead.
 
 ```bash
     $ git reflog
+```
 
 
 ### Use subtrees
@@ -160,6 +166,7 @@ subtree`.
     $ git fetch plugin
     $ git read-tree --prefix=vendor/plugins/demo -u plugin/master
     $ git commit -m "Added demo plugin subtree in vendor/plugins/demo"
+```
 
 #### Updating a subtree
 
@@ -167,6 +174,7 @@ subtree`.
     $ git fetch plugin
     $ git merge -s subtree --squash plugin/master
     $ git commit -m "Updated the plugin"
+```
 
   Source: [medium.com][subtree]
 
@@ -182,6 +190,7 @@ repository.
     $ pushd <big-repo>
     $ git subtree split -P <name-of-folder> -b <name-of-new-branch>
     $ popd
+```
 
   _Note:_ <name-of-folder> must NOT contain leading or trailing characters btoa != ./btoa/
 
@@ -193,12 +202,14 @@ repository.
 
     $ git init
     $ git pull </path/to/big-repo> <name-of-new-branch>
+```
 
   Link the new repo to Github or wherever
 
 ```bash
     $ git remote add origin <git@github.com:my-user/new-repo.git>
     $ git push -u origin master
+```
 
   Cleanup, if desired
 
@@ -206,6 +217,7 @@ repository.
     $ popd # get out of <new-repo>
     $ pushd <big-repo>
     $ git rm -rf <name-of-folder>
+```
 
   Source: [stackoverflow.com][detach]
 
@@ -217,6 +229,7 @@ commit):
 
 ```bash
     $ git pull
+```
 
       A--B--C (origin/master)            A--B--C--E (master)
           \                        =>        \   /
@@ -229,6 +242,7 @@ subsequent pushes must be done withe the `--force` flag):
 
 ```bash
     $ git pull --rebase
+```
 
       A--B--C (origin/master)            A--B--C (origin/master)
           \                        =>           \
@@ -247,6 +261,7 @@ echo
 cd /var/www/gregseth.net
 unset GIT_DIR
 git pull origin master
+```
 
 
 Configuration
@@ -273,7 +288,7 @@ Ignoring files
 --------------
 
   Just add a `.gitignore` file at the root of the project folder.
-
+```gitignore
     # Visual studio
     *.user
     *.suo
@@ -311,12 +326,13 @@ Ignoring files
     bin
 
     # Project specific
-
+```
 
 
 
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNDYzOTcyMiwtMTU0NzEzMTExOF19
+eyJoaXN0b3J5IjpbLTEwMTc3NzkxMDQsLTE1NDcxMzExMThdfQ
+==
 -->
