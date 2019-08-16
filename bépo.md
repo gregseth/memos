@@ -173,11 +173,11 @@ Limitations :
 
 ```mermaid
 graph LR
-D(pgm+fn<br><i>led1: vert)
-M[macro<br><i>led1: rouge]
-P[programme<br><i>led2: rouge à l'apppui]
-S[pgm<br><i>led1+2: 2x vert]
-F(pgm+fn<br><i>led1: rouge)
+D(pgm+fn<br><i>led1: vert</i>)
+M[macro<br><i>led1: rouge</i>]
+P[programme<br><i>led2: rouge à l'apppui</i>]
+S[pgm<br><i>led1+2: 2x vert</i>]
+F(pgm+fn<br><i>led1: rouge</i>)
 
 D --> M
 M --> P
@@ -192,9 +192,9 @@ Après une programmation la led1 reste sur rouge. Pour se retrouver dans un éta
 
 ```mermaid
 graph LR
-D(pgm+fn <br><i> led1: vert)
-K[pgm ou fn 5 sec <br><i> led1: rouge<br>led2: rouge, puis vert 5 sec]
-N[nouvelle touche <br><i> led1: vert<br>led2: vert clignotant]
+D(pgm+fn <br><i> led1: vert</i>)
+K[pgm ou fn 5 sec <br><i> led1: rouge<br>led2: rouge, puis vert 5 sec</i>]
+N[nouvelle touche <br><i> led1: vert<br>led2: vert clignotant</i>]
 F(pgm+fn)
 
 D --> K
@@ -207,15 +207,15 @@ N --> F
 
 ```mermaid
 graph LR
-D(pgm+scrlk <br><i> led1+2: 3x vert)
+D(pgm+scrlk <br><i> led1+2: 3x vert</i>)
 subgraph 
-  K1[capslock<br><i>couleur actuelle]
-  K2[fn+Q <br> fn+G <br> fn+H <br> fn+F<br><i>led1+2 rouge puis<br>couleur actuelle]
+  K1[capslock<br><i>couleur actuelle</i>]
+  K2[fn+Q <br> fn+G <br> fn+H <br> fn+F<br><i>led1+2 rouge puis<br>couleur actuelle</i>]
 end
-RVB[fn+F6 <br> fn+F7 <br> fn+F8]
+RVB[fn+F6 <br> fn+F7 <br> fn+F8</i>]
 RVB
-S[pgm <br><i> led1+2: 3x vert]
-F(pgm+scrlk <br><i> led1+2: 3x vert)
+S[pgm <br><i> led1+2: 3x vert</i>]
+F(pgm+scrlk <br><i> led1+2: 3x vert</i>)
 
 D --> K1
 D --> K2
