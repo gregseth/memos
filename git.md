@@ -186,8 +186,8 @@ To filter out the subfolder from the rest of the files in the repository, run:
 git filter-branch --prune-empty --subdirectory-filter <folder-name> <branch-name>
 ```
 with:
-  - `<folder-name>`: The folder within your project that you'd like to create a separate repository from.
-  - `<branch-name>`: The default branch for your current project, for example,  `master`.
+-   `<folder-name>`: The folder within your project that you'd like to create a separate repository from.
+-   `<branch-name>`: The default branch for your current project, for example,  `master`.
 
 Source: [help.github.com][split]
 
@@ -232,10 +232,15 @@ git pull origin master
 
 
 ### Remove file from history
+Run the following command, replacing  `<path/to/the/file>`  with the  **path to the file you want to remove, not just its filename**. These arguments will:
+
+-   Force Git to process, but not check out, the entire history of every branch and tag
+-   Remove the specified file, as well as any empty commits generated as a result
+-   **Overwrite your existing tags**
 
 ```bash
 git filter-branch --force --index-filter \
-   "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" \
+   "git rm --cached --ignore-unmatch <path/to/the/file>" \
    --prune-empty --tag-name-filter cat -- --all
 ```
 
@@ -312,6 +317,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
   [erase]: https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5ODgyMTkyNCwxNjkwMzg5MDc0LDE4ND
+eyJoaXN0b3J5IjpbLTY0ODkxNjkwNywxNjkwMzg5MDc0LDE4ND
 I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
 -->
