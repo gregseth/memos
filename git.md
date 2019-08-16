@@ -113,25 +113,30 @@ How to…
 
   First create the branch, ending at the desired commit:
 
-    $ git branch <topic> D
+```bash
+git branch <topic> D
 
   Then rebase `master`, starting after `B`:
 
-    $ git rebase -i B
+```bash
+git rebase -i B
 
   Instead of an interactive rebase, it's possible to use the `--onto` option. In this example it makes the commit `B` take the place of `D`, skipping the in-between ones.
 
-    $ git rebase D --onto B
+```bash
+git rebase D --onto B
 
 
 ### Undo
 
   To get a specific file as it was in a specific commit (eg. `HEAD`) and cancel its working dir changes:
 
+```bash
     $ git checkout <commit> <file.ext>
 
   To restore the whole repository as it was in a spcific commit (eg. `HEAD^`):
 
+```bash
     $ git reset --hard <commit>
 
   To do the same as previously, but keep the local changes and just reset the
@@ -139,6 +144,7 @@ index use `--soft` instead.
 
   To see the history of the local repo (and the hash of a lost commit):
 
+```bash
     $ git reflog
 
 
@@ -149,6 +155,7 @@ subtree`.
 
 #### Adding a subtree
 
+```bash
     $ git remote add plugin ../remotes/plugin
     $ git fetch plugin
     $ git read-tree --prefix=vendor/plugins/demo -u plugin/master
@@ -156,6 +163,7 @@ subtree`.
 
 #### Updating a subtree
 
+```bash
     $ git fetch plugin
     $ git merge -s subtree --squash plugin/master
     $ git commit -m "Updated the plugin"
@@ -170,6 +178,7 @@ repository.
 
   Prepare the old repo
 
+```bash
     $ pushd <big-repo>
     $ git subtree split -P <name-of-folder> -b <name-of-new-branch>
     $ popd
@@ -178,6 +187,7 @@ repository.
 
   Create the new repo
 
+```bash
     $ mkdir <new-repo>
     $ pushd <new-repo>
 
@@ -186,11 +196,13 @@ repository.
 
   Link the new repo to Github or wherever
 
+```bash
     $ git remote add origin <git@github.com:my-user/new-repo.git>
     $ git push -u origin master
 
   Cleanup, if desired
 
+```bash
     $ popd # get out of <new-repo>
     $ pushd <big-repo>
     $ git rm -rf <name-of-folder>
@@ -203,6 +215,7 @@ repository.
   To update a local repo (the local commits will be merged, creating a merge
 commit):
 
+```bash
     $ git pull
 
       A--B--C (origin/master)            A--B--C--E (master)
@@ -214,6 +227,7 @@ commit):
 commits **must not** have been pushed to a public repository; if they have the
 subsequent pushes must be done withe the `--force` flag):
 
+```bash
     $ git pull --rebase
 
       A--B--C (origin/master)            A--B--C (origin/master)
@@ -225,13 +239,14 @@ subsequent pushes must be done withe the `--force` flag):
 
   Add the following in the `repo.git/hooks/post-update` file:
 
-    echo
-    echo "===== Pulling changes into live server ====="
-    echo
+```bash
+echo
+echo "===== Pulling changes into live server ====="
+echo
 
-    cd /var/www/gregseth.net
-    unset GIT_DIR
-    git pull origin master
+cd /var/www/gregseth.net
+unset GIT_DIR
+git pull origin master
 
 
 Configuration
@@ -239,19 +254,20 @@ Configuration
 
 Here's a basic configuation file:
 
-    [alias]
-      ci = commit
-      co = checkout
-      df = diff
-      rv = rev-list --all --pretty=oneline
-      ls = ls-files
-      ign = ls-files -o -i --exclude-standard
-      hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-    [color]
-      ui = true
-    [push]
-      default = current
-
+```ini
+[alias]
+  ci = commit
+  co = checkout
+  df = diff
+  rv = rev-list --all --pretty=oneline
+  ls = ls-files
+  ign = ls-files -o -i --exclude-standard
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[color]
+  ui = true
+[push]
+  default = current
+```
 
 Ignoring files
 --------------
@@ -302,5 +318,5 @@ Ignoring files
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NzAyODA1MCwtMTU0NzEzMTExOF19
+eyJoaXN0b3J5IjpbLTkxNDYzOTcyMiwtMTU0NzEzMTExOF19
 -->
