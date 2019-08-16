@@ -231,6 +231,13 @@ git pull origin master
 ```
 
 
+### Remove file from history
+
+^
+
+Source: [help.github.com][erase]
+
+
 Configuration
 -------------
 
@@ -299,7 +306,8 @@ Just add a `.gitignore` file at the root of the project folder.
 
   [split]: https://help.github.com/en/articles/splitting-a-subfolder-out-into-a-new-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
+  [erase]: https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTkzMjMyODEsMTY5MDM4OTA3NCwxOD
-QyOTA0NjE4LC0xNTQ3MTMxMTE4XX0=
+eyJoaXN0b3J5IjpbLTEzNTcxMzYxNCwxNjkwMzg5MDc0LDE4ND
+I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
 -->
