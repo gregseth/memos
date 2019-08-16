@@ -179,47 +179,20 @@ git commit -m "Updated the plugin"
   Source: [medium.com][subtree]
 
 
-### Detach subdirectory into separate Git repository
+### Split subdirectory into separate Git repository
 
-  For cases when a subdirectory of a repo needs to be made a standalone
-repository.
+1.  Clone the repository that contains the subfolder.
+    
+2.  Change the current working directory to your cloned repository.
+    
+3.  To filter out the subfolder from the rest of the files in the repository, run:
 
-  Prepare the old repo
-
-```bash
-pushd <big-repo>
-git subtree split -P <name-of-folder> -b <name-of-new-branch>
-popd
-```
-
-  _Note:_ <name-of-folder> must NOT contain leading or trailing characters btoa != ./btoa/
-
-  Create the new repo
-
-```bash
-mkdir <new-repo>
-pushd <new-repo>
-
-git init
-git pull </path/to/big-repo> <name-of-new-branch>
-```
-
-  Link the new repo to Github or wherever
-
-```bash
-git remote add origin <git@github.com:my-user/new-repo.git>
-git push -u origin master
-```
-
-  Cleanup, if desired
-
-```bash
-popd # get out of <new-repo>
-pushd <big-repo>
-git rm -rf <name-of-folder>
-```
-
-  Source: [stackoverflow.com][detach]
+  [`git filter-branch`](https://git-scm.com/docs/git-filter-branch), supplying this information:
+    
+    -   `FOLDER-NAME`: The folder within your project that you'd like to create a separate repository from.
+        
+    -   `BRANCH-NAME`: The default branch for your current project, for example,  `master`  or  `gh-pages`.
+  
 
 
 ### Updating
@@ -330,6 +303,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MDM4OTA3NCwxODQyOTA0NjE4LC0xNT
-Q3MTMxMTE4XX0=
+eyJoaXN0b3J5IjpbMTQzMTUwODM3MCwxNjkwMzg5MDc0LDE4ND
+I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
 -->
