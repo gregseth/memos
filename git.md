@@ -8,11 +8,15 @@ Create a new remote bare repo and set it as origin for the local one
 
   First, on the remote server, create a fresh bare repo.
 
-    $ git init --bare
+```bash
+git init --bare
+```
 
   Then, on the local machine, add a remote to the local repository.
 
-    $ git remote add origin [user@server:]/var/git/the_project_name.git
+```bash
+git remote add origin [user@server:]/var/git/the_project_name.git
+```
 
   This, by itself, does not do exacly much except to add a remote repository to
 your local repo config. The remote repo is called origin, which is the default
@@ -65,13 +69,16 @@ Useful commands
 
   Cloning syntax:
 
-    $ git clone ssh://<user>:<password>@<server>:<port>/<path>
-    $ git clone <user>@<server>:<path>
+```bash
+git clone ssh://<user>:<password>@<server>:<port>/<path>
+git clone <user>@<server>:<path>
+```
 
-  Init and pull a submodule:
+Init and pull a submodule:
 
-    $ git submodule update --init --recursive
-
+```bash
+git submodule update --init --recursive
+```
 
 Configuration
 -------------
@@ -288,5 +295,6 @@ Ignoring files
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDcxMzExMThdfQ==
+eyJoaXN0b3J5IjpbLTIwNjkxNjU5NDgsLTE1NDcxMzExMThdfQ
+==
 -->
