@@ -185,10 +185,14 @@ git commit -m "Updated the plugin"
     
 2.  Change the current working directory to your cloned repository.
     
-3.  To filter out the subfolder from the rest of the files in the repository, run:
+3.  To filter out the subfolder from the rest of the files in the repository, run thefollowing command, with:
+    - 
 
-  [`git filter-branch`](https://git-scm.com/docs/git-filter-branch), supplying this information:
-    
+```bash
+git filter-branch --prune-empty --subdirectory-filter FOLDER-NAME  BRANCH-NAME
+```
+
+   
     -   `FOLDER-NAME`: The folder within your project that you'd like to create a separate repository from.
         
     -   `BRANCH-NAME`: The default branch for your current project, for example,  `master`  or  `gh-pages`.
@@ -303,6 +307,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTUwODM3MCwxNjkwMzg5MDc0LDE4ND
-I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
+eyJoaXN0b3J5IjpbLTEwNDQ4MDc5MjcsMTY5MDM4OTA3NCwxOD
+QyOTA0NjE4LC0xNTQ3MTMxMTE4XX0=
 -->
