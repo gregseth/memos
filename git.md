@@ -233,7 +233,11 @@ git pull origin master
 
 ### Remove file from history
 
-^
+```bash
+git filter-branch --force --index-filter \
+   "git rm --cached --ignore-unmatch PATH-TO-YOUR-FILE-WITH-SENSITIVE-DATA" \
+   --prune-empty --tag-name-filter cat -- --all
+```
 
 Source: [help.github.com][erase]
 
@@ -308,6 +312,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
   [erase]: https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTcxMzYxNCwxNjkwMzg5MDc0LDE4ND
+eyJoaXN0b3J5IjpbLTk5ODgyMTkyNCwxNjkwMzg5MDc0LDE4ND
 I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
 -->
