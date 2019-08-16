@@ -187,16 +187,11 @@ git commit -m "Updated the plugin"
     
 3.  To filter out the subfolder from the rest of the files in the repository, run thefollowing command, with:
     - `<folder-name>`: The folder within your project that you'd like to create a separate repository from.
-        
     - `<branch-name>`: The default branch for your current project, for example,  `master`.
 
 ```bash
 git filter-branch --prune-empty --subdirectory-filter <folder-name> <branch-name>
 ```
-
-   
-
-  
 
 
 ### Updating
@@ -307,6 +302,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDc3ODIzMDcsMTY5MDM4OTA3NCwxOD
-QyOTA0NjE4LC0xNTQ3MTMxMTE4XX0=
+eyJoaXN0b3J5IjpbMjI3NzU3NDgxLDE2OTAzODkwNzQsMTg0Mj
+kwNDYxOCwtMTU0NzEzMTExOF19
 -->
