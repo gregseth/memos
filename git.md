@@ -18,24 +18,21 @@ git init --bare
 git remote add origin [user@server:]/var/git/the_project_name.git
 ```
 
-  This, by itself, does not do exacly much except to add a remote repository to
-your local repo config. The remote repo is called origin, which is the default
-name git chooses if you git clone from a remote repo. The remote repo is not
-associated with any local branches yet.
+  This, by itself, does not do exacly much except to add a remote repository to your local repo config. The remote repo is called origin, which is the default name git chooses if you git clone from a remote repo. The remote repo is not associated with any local branches yet.
 
-  Second, push the accumulated local commits to the remote repo, designating the
-remote as the default for future push/pull operations.
+  Second, push the accumulated local commits to the remote repo, designating the remote as the default for future push/pull operations.
 
-    $ git push --set-upstream origin master
+```bash
+git push --set-upstream origin master
+```
 
-  This will push the local master branch to the remote origin, creating a master
-branch there as well, and ties origin to the local master branch as the default
-for push and pull. Future git pull and git push will work without any
-specifications of local or remote branches.
+  This will push the local master branch to the remote origin, creating a master branch there as well, and ties origin to the local master branch as the default for push and pull. Future git pull and git push will work without any specifications of local or remote branches.
 
   Once done, to change the location of the remote repository use:
 
-    $ git remote set-url origin [user@server:]/var/git/new_project_name.git
+```bash
+git remote set-url origin [user@server:]/var/git/new_project_name.git
+```
 
 
 Useful commands
@@ -43,14 +40,14 @@ Useful commands
 
   List all the commits and the affected files:
 
+```bash
     $ git log --name-status
 
   List all commits and their hashtag:
 
     $ git rev-list --all --pretty=oneline
 
-  Delete from the local repository all files that were locally deleted without
- using the `git rm` command:
+  Delete from the local repository all files that were locally deleted without using the `git rm` command:
 
     $ git ls-files -d -z | xargs -0 git update-index --remove
 
@@ -295,6 +292,5 @@ Ignoring files
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjkxNjU5NDgsLTE1NDcxMzExMThdfQ
-==
+eyJoaXN0b3J5IjpbMTc4MDUyMTg5MiwtMTU0NzEzMTExOF19
 -->
