@@ -41,28 +41,39 @@ Useful commands
   List all the commits and the affected files:
 
 ```bash
-    $ git log --name-status
+git log --name-status
+```
 
   List all commits and their hashtag:
 
-    $ git rev-list --all --pretty=oneline
+```bash
+git rev-list --all --pretty=oneline
+```
 
   Delete from the local repository all files that were locally deleted without using the `git rm` command:
 
-    $ git ls-files -d -z | xargs -0 git update-index --remove
+```bash
+git ls-files -d -z | xargs -0 git update-index --remove
+```
 
   Set the local `<branch>` to track the `<remote/branch>`:
 
-    $ git branch -u <remote/branch> <branch>
+```bash
+git branch -u <remote/branch> <branch>
+```
 
   Set a different push URL for a remote repository:
 
-    $ git remote set-url --push <remote> <URL>
-    $ git remote -v  # to check the change has correctly been applied
+```bash
+git remote set-url --push <remote> <URL>
+git remote -v  # to check the change has correctly been applied
+```
 
   Show the local branches tracking information:
 
-    $ git branch -vv
+```bash
+git branch -vv
+```
 
   Cloning syntax:
 
@@ -82,7 +93,9 @@ Configuration
 
   Colors:
 
-    $ git config --global color.ui true
+```bash
+git config --global color.ui true
+```
 
 
 How to…
@@ -106,17 +119,14 @@ How to…
 
     $ git rebase -i B
 
-  Instead of an interactive rebase, it's possible to use the `--onto` option.
-In this example it makes the commit `B` take the place of `D`, skipping the
-in-between ones.
+  Instead of an interactive rebase, it's possible to use the `--onto` option. In this example it makes the commit `B` take the place of `D`, skipping the in-between ones.
 
     $ git rebase D --onto B
 
 
 ### Undo
 
-  To get a specific file as it was in a specific commit (eg. `HEAD`) and cancel
-its working dir changes:
+  To get a specific file as it was in a specific commit (eg. `HEAD`) and cancel its working dir changes:
 
     $ git checkout <commit> <file.ext>
 
@@ -292,5 +302,5 @@ Ignoring files
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MDUyMTg5MiwtMTU0NzEzMTExOF19
+eyJoaXN0b3J5IjpbMTM4NzAyODA1MCwtMTU0NzEzMTExOF19
 -->
