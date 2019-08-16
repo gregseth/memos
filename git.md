@@ -224,8 +224,7 @@ repository.
 
 ### Updating
 
-  To update a local repo (the local commits will be merged, creating a merge
-commit):
+  To update a local repo (the local commits will be merged, creating a merge commit):
 
 ```bash
     $ git pull
@@ -236,9 +235,7 @@ commit):
            D (master)                         -D-
 
 
-  To update a local repo, and prevent a merge commit (doing so, the rebased
-commits **must not** have been pushed to a public repository; if they have the
-subsequent pushes must be done withe the `--force` flag):
+  To update a local repo, and prevent a merge commit (doing so, the rebased commits **must not** have been pushed to a public repository; if they have the subsequent pushes must be done withe the `--force` flag):
 
 ```bash
     $ git pull --rebase
@@ -267,7 +264,7 @@ git pull origin master
 Configuration
 -------------
 
-Here's a basic configuation file:
+  Here's a basic configuation file:
 
 ```ini
 [alias]
@@ -287,8 +284,8 @@ Here's a basic configuation file:
 Ignoring files
 --------------
 
-  Just add a `.gitignore` file at the root of the project folder.
-```gitignore
+Just add a `.gitignore` file at the root of the project folder.
+
     # Visual studio
     *.user
     *.suo
@@ -326,13 +323,12 @@ Ignoring files
     bin
 
     # Project specific
-```
+
 
 
 
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTc3NzkxMDQsLTE1NDcxMzExMThdfQ
-==
+eyJoaXN0b3J5IjpbMTg0MjkwNDYxOCwtMTU0NzEzMTExOF19
 -->
