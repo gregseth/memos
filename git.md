@@ -232,7 +232,8 @@ git pull origin master
 
 
 ### Remove file from history
-Run the following command, replacing  `<path/to/the/file>`  with the  **path to the file you want to remove, not just its filename**. These arguments will:
+
+Run the following command, replacing `<path/to/the/file>` with the  **path to the file you want to remove, not just its filename**. These arguments will:
 
 -   Force Git to process, but not check out, the entire history of every branch and tag
 -   Remove the specified file, as well as any empty commits generated as a result
@@ -317,6 +318,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
   [erase]: https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0ODkxNjkwNywxNjkwMzg5MDc0LDE4ND
+eyJoaXN0b3J5IjpbMTI4NjM4NjY5NSwxNjkwMzg5MDc0LDE4ND
 I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
 -->
