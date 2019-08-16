@@ -181,19 +181,13 @@ git commit -m "Updated the plugin"
 
 ### Split subdirectory into separate Git repository
 
-1.  Clone the repository that contains the subfolder.
-    
-2.  Change the current working directory to your cloned repository.
-    
-3.  To filter out the subfolder from the rest of the files in the repository, run thefollowing command, with:
-    - `<folder-name>`: The folder within your project that you'd like to create a separate repository from.
-    - `<branch-name>`: The default branch for your current project, for example,  `master`.
-
+To filter out the subfolder from the rest of the files in the repository, run:
 ```bash
 git filter-branch --prune-empty --subdirectory-filter <folder-name> <branch-name>
 ```
-
-
+with:
+  - `<folder-name>`: The folder within your project that you'd like to create a separate repository from.
+  - `<branch-name>`: The default branch for your current project, for example,  `master`.
 ### Updating
 
   To update a local repo (the local commits will be merged, creating a merge commit):
@@ -302,6 +296,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3NzU3NDgxLDE2OTAzODkwNzQsMTg0Mj
-kwNDYxOCwtMTU0NzEzMTExOF19
+eyJoaXN0b3J5IjpbMTU3MDc5Mjg2OCwxNjkwMzg5MDc0LDE4ND
+I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
 -->
