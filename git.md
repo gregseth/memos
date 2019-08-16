@@ -189,6 +189,8 @@ with:
   - `<folder-name>`: The folder within your project that you'd like to create a separate repository from.
   - `<branch-name>`: The default branch for your current project, for example,  `master`.
 
+Source: [help.github.com][split]
+
 
 ### Updating (to rebase or not)
 
@@ -295,9 +297,9 @@ Just add a `.gitignore` file at the root of the project folder.
 
 
 
-  [detach]: http://stackoverflow.com/questions/359424/detach-subdirectory-into-separate-git-repository
+  [split]: https://help.github.com/en/articles/splitting-a-subfolder-out-into-a-new-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyODYwOTY4MiwxNjkwMzg5MDc0LDE4ND
-I5MDQ2MTgsLTE1NDcxMzExMThdfQ==
+eyJoaXN0b3J5IjpbLTE3OTkzMjMyODEsMTY5MDM4OTA3NCwxOD
+QyOTA0NjE4LC0xNTQ3MTMxMTE4XX0=
 -->
