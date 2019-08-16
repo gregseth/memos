@@ -314,6 +314,4 @@ in a general manner add any *ui*, *core* or *jdt* file from this folder.
 
   [1]: http://forums.whirlpool.net.au/archive/938337
   [2]: http://www.pctools.com/guides/registry/detail/109/
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNzg1NzA5OSwtMTA2Njk2MzkxNV19
--->
+

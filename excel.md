@@ -149,10 +149,3 @@ comparer le contenu de la cellule.
   abcd                 |                 `@"--"` | abcd--
   abcd                 |                 `@_-\-` | abcd -
   abcd                 |                   `@*-` | abcd-------
-
-
- 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDM2ODU3ODUsLTExNjA1OTIyNjldfQ
-==
--->

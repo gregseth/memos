@@ -495,9 +495,3 @@ Shortcuts
  C-c     | Terminate the command.
  C-d     | End of transmission.
  C-z     | Suspends the current command in background, restart with fg or bg.
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDI5MDQ0MiwxNTE2OTkwNzg2LDE1MD
-c5OTgyNTAsLTEzNDc1OTkzMTRdfQ==
--->

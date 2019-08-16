@@ -262,10 +262,3 @@ S --> F
  international3 | f18
  non_us_pound   | f19
  international2 | f20
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI3MzAyMTU1LC0zMzYyNDUxODgsLTE1Mj
-YxMDM3OTcsLTE2MjgwNTE5ODQsLTk5ODYxNTU2OCwxNzcxNzQ2
-OTk1LDEyNzQxOTk1OTMsLTU4NDkwMjIzOSwxNzcxNzQ2OTk1LC
-0xNjY2ODgxNzQ5XX0=
--->
