@@ -18,6 +18,4 @@ J'affronterai ma peur.
 Je lui permettrai de passer sur moi, au travers de moi.  
 Et lorsqu'elle sera passée, je tournerai mon œil intérieur sur son chemin.  
 Et là où elle sera passée, il n'y aura plus rien. Rien que moi.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODg3MzQ4MDJdfQ==
--->
+

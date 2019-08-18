@@ -250,6 +250,4 @@ Omnes vulnerant, ultima necat
 
 Omnia dicta fortiora si dicta Latina 
     « Un propos prend plus de force lorsqu'il est dit en latin. »
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzM5MzM0MTBdfQ==
--->
+

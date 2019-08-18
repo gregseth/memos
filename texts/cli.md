@@ -920,6 +920,4 @@ What would the engineer say, after you had explained your problem, and enumerate
   [1]: http://www.debian.org/devel/constitution
   [2]: http://www.debian.org/Bugs
   [3]: http://www.be.com/developers/bugs/index.html
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4OTk0NzE2MCwxODcxOTkwMjA0XX0=
--->
+
