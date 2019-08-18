@@ -268,3 +268,6 @@ Just add a `.gitignore` file at the root of the project folder.
   [split]: https://help.github.com/en/articles/splitting-a-subfolder-out-into-a-new-repository
   [subtree]: https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec
   [erase]: https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTQ1NTQzNTg2NF19
+-->
