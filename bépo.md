@@ -146,6 +146,24 @@ La touche en haut à gauche de la disposition (`$/#`), ne fonctionne pas avec `a
  grave_accent_and_tilde (`)  | non_us_backslash
  international1              | backslash (`\`)
 
+### Clavier Ergodox EZ Shine
+
+
+#### Modes de rétroéclairage
+
+Type            | Modes | Teinte | Luminosité
+----------------|------:|----:|-----------:
+Fixed           |     1 | yes | yes
+Fade in/out     |     4 | yes |  no
+Color wheel     |     3 |  no | yes
+Rainbow slide   |     6 |  no | yes
+K2000 (ext)     |     3 | yes | yes
+K2000 (int)     |     3 | yes | yes
+K2000 (yoyo)    |     3 | yes | yes
+Red/green alt   |     1 |  no | yes
+Rainbow         |    10 | yes | yes
+RGB blink       |     1 |  no |  no
+Left/right blink|     1 | yes | yes
 
 ### Clavier WASD
 
