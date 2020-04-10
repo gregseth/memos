@@ -12,9 +12,42 @@ La version 1.1 a introduit deux changements « inacceptables » par rapport à l
 L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.1.bundle/Contents/Resources/bepo.keylayout` permet de rétablir la disposition de la version 1.0 pour ces caractères.
 
 ```diff
---- /Volumes/bepo 1.1 rc2/bepo 1.1.bundle/Contents/Resources/bepo.keylayout 2019-04-30 12:10:22.000000000 +0200
-+++ /Library/Keyboard Layouts/bepo 1.1.bundle/Contents/Resources/bepo.keylayout 2019-08-03 15:17:13.000000000 +0200
-@@ -179,7 +179,7 @@
+--- /Users/seth/Desktop/bepo 1.1.bundle/Contents/Resources/bepo.keylayout   2019-04-30 12:10:22.000000000 
++++ /Library/Keyboard Layouts/bepo 1.1.bundle/Contents/Resources/bepo.keylayout 2020-04-02 22:17:46.000000000 
+@@ -104,25 +104,25 @@
+        <keyMap index="3" baseMapSet="ISO" baseIndex="3">
+            <!-- shift caps lock -->
+            <key code="50" output="#"/>
+        </keyMap>
+        <keyMap index="4" baseMapSet="ISO" baseIndex="4">
+            <!-- option -->
+-           <key code="50" output=""/>
++           <key code="50" output="–"/>
+        </keyMap>
+        <keyMap index="5" baseMapSet="ISO" baseIndex="5">
+            <!-- shift option -->
+-           <key code="50" output=""/>
++           <key code="50" output="¶"/>
+        </keyMap>
+        <keyMap index="6" baseMapSet="ISO" baseIndex="6">
+            <!-- shift option caps lock -->
+-           <key code="50" output=""/>
++           <key code="50" output="¶"/>
+        </keyMap>
+        <keyMap index="7" baseMapSet="ISO" baseIndex="7">
+            <!-- option caps lock -->
+-           <key code="50" output=""/>
++           <key code="50" output="–"/>
+        </keyMap>
+        <keyMap index="8" baseMapSet="ISO" baseIndex="8">
+            <!-- option command -->
+            <key code="50" output=""/>
+        </keyMap>
+        <keyMap index="9" baseMapSet="ISO" baseIndex="9">
+@@ -176,13 +176,13 @@
+            <key code="39" action="m"/>
+            <key code="40" action="s"/>
+            <key code="41" action="n"/>
             <key code="42" action="ç"/>
             <key code="43" action="g"/>
             <key code="44" action="f"/>
@@ -23,7 +56,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="46" action="q"/>
             <key code="47" action="h"/>
             <key code="48" output="&#x0009;"/>
-@@ -359,7 +359,7 @@
+            <!-- Tab -->
+            <key code="49" action="espace"/>
+            <key code="50" action="ê"/>
+@@ -356,13 +356,13 @@
+            <key code="44" action="F"/>
+            <key code="45" action="?"/>
+            <key code="46" action="Q"/>
             <key code="47" action="H"/>
             <key code="48" output="&#x0009;"/>
             <!-- Tab -->
@@ -32,7 +71,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="50" action="Ê"/>
             <key code="51" output="&#x0008;"/>
             <!-- Backspace -->
-@@ -528,7 +528,7 @@
+            <key code="52" output="&#x0003;"/>
+            <!-- Enter (Fn-Return) -->
+            <key code="53" output="&#x001B;"/>
+@@ -525,13 +525,13 @@
+            <key code="39" action="M"/>
+            <key code="40" action="S"/>
+            <key code="41" action="N"/>
             <key code="42" action="Ç"/>
             <key code="43" action="G"/>
             <key code="44" action="F"/>
@@ -41,7 +86,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="46" action="Q"/>
             <key code="47" action="H"/>
             <key code="48" output="&#x0009;"/>
-@@ -707,7 +707,7 @@
+            <!-- Tab -->
+            <key code="49" action="espace"/>
+            <key code="50" action="Ê"/>
+@@ -704,13 +704,13 @@
+            <key code="44" action="f"/>
+            <key code="45" action="?"/>
+            <key code="46" action="q"/>
             <key code="47" action="h"/>
             <key code="48" output="&#x0009;"/>
             <!-- Tab -->
@@ -50,7 +101,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="50" action="ê"/>
             <key code="51" output="&#x0008;"/>
             <!-- Backspace -->
-@@ -835,7 +835,7 @@
+            <key code="52" output="&#x0003;"/>
+            <!-- Enter (Fn-Return) -->
+            <key code="53" output="&#x001B;"/>
+@@ -832,13 +832,13 @@
+            <!-- option -->
+            <key code="0" action="æ"/>
+            <key code="1" action="ù"/>
             <key code="2" action="trema"/>
             <key code="3" action="€"/>
             <key code="4" action="cedille"/>
@@ -59,7 +116,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="6" action="\"/>
             <key code="7" action="{"/>
             <key code="8" action="}"/>
-@@ -1012,7 +1012,7 @@
+            <key code="9" action="…"/>
+            <key code="10" action="–"/>
+            <key code="11" action="~"/>
+@@ -1009,13 +1009,13 @@
+            <key code="2" action="pointsuscrit"/>
+            <key code="3" action="monnaie"/>
+            <key code="4" action="©"/>
             <key code="5" action="virgule"/>
             <key code="6" action="‚"/>
             <key code="7" action="‘"/>
@@ -68,7 +131,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="9" action="·"/>
             <key code="10" action="¶"/>
             <key code="11" action="‑"/>
-@@ -1055,7 +1055,7 @@
+            <key code="12" action="_"/>
+            <key code="13" action="♥"/>
+            <key code="14" action="§"/>
+@@ -1052,13 +1052,13 @@
+            <key code="44" action="⛄"/>
+            <key code="45" action="crochet"/>
+            <key code="46" action="corne"/>
             <key code="47" action="‡"/>
             <key code="48" output="&#x0009;"/>
             <!-- Tab -->
@@ -77,7 +146,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="50" action="^"/>
             <key code="51" output="&#x0008;"/>
             <!-- Backspace -->
-@@ -1186,7 +1186,7 @@
+            <key code="52" output="&#x0003;"/>
+            <!-- Enter (Fn-Return) -->
+            <key code="53" output="&#x001B;"/>
+@@ -1183,13 +1183,13 @@
+            <key code="2" action="pointsuscrit"/>
+            <key code="3" action="monnaie"/>
+            <key code="4" action="©"/>
             <key code="5" action="virgule"/>
             <key code="6" action="‚"/>
             <key code="7" action="‘"/>
@@ -86,7 +161,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="9" action="·"/>
             <key code="10" action="¶"/>
             <key code="11" action="‑"/>
-@@ -1229,7 +1229,7 @@
+            <key code="12" action="_"/>
+            <key code="13" action="♥"/>
+            <key code="14" action="§"/>
+@@ -1226,13 +1226,13 @@
+            <key code="44" action="⛄"/>
+            <key code="45" action="crochet"/>
+            <key code="46" action="corne"/>
             <key code="47" action="‡"/>
             <key code="48" output="&#x0009;"/>
             <!-- Tab -->
@@ -95,7 +176,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="50" action="^"/>
             <key code="51" output="&#x0008;"/>
             <!-- Backspace -->
-@@ -1357,7 +1357,7 @@
+            <key code="52" output="&#x0003;"/>
+            <!-- Enter (Fn-Return) -->
+            <key code="53" output="&#x001B;"/>
+@@ -1354,13 +1354,13 @@
+            <!-- option caps lock -->
+            <key code="0" action="Æ"/>
+            <key code="1" action="Ù"/>
             <key code="2" action="trema"/>
             <key code="3" action="€"/>
             <key code="4" action="cedille"/>
@@ -104,7 +191,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="6" action="\"/>
             <key code="7" action="{"/>
             <key code="8" action="}"/>
-@@ -1531,7 +1531,7 @@
+            <key code="9" action="…"/>
+            <key code="10" action="–"/>
+            <key code="11" action="~"/>
+@@ -1528,13 +1528,13 @@
+            <!-- option command -->
+            <key code="0" action="æ"/>
+            <key code="1" action="ù"/>
             <key code="2" action="trema"/>
             <key code="3" action="€"/>
             <key code="4" action="cedille"/>
@@ -113,7 +206,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <key code="6" action="\"/>
             <key code="7" action="{"/>
             <key code="8" action="}"/>
-@@ -1991,8 +1991,8 @@
+            <key code="9" action="…"/>
+            <key code="10" action="–"/>
+            <key code="11" action="~"/>
+@@ -1988,14 +1988,14 @@
+            <when state="scientifique" output="♀"/>
+        </action>
+        <action id="%">
             <when state="none" output="%"/>
             <when state="latin" output="‱"/>
         </action>
@@ -124,7 +223,13 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <when state="latin" output="‛"/>
             <when state="scientifique" output="⊃"/>
             <when state="scientifiquebarre" output="⊅"/>
-@@ -4484,8 +4484,8 @@
+        </action>
+        <action id="(">
+            <when state="none" output="("/>
+@@ -4481,14 +4481,14 @@
+            <when state="scientifique" output="♆"/>
+        </action>
+        <action id="‘">
             <when state="none" output="‘"/>
             <when state="latin" output="ʻ"/>
         </action>
@@ -135,11 +240,16 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <when state="aigu" output="́"/>
             <when state="barre" output="̸"/>
             <when state="breve" output="̆"/>
+            <when state="breveinverse" output="̑"/>
+            <when state="caron" output="̌"/>
+            <when state="cedille" output="̧"/>
+
 ```
 
 ## Utilisation d'un clavier non Apple sur macOS
 
-La touche en haut à gauche de la disposition (`$/#`), ne fonctionne pas avec `alt` sur les claviers non Apple (impossible d'accéder aux caractères `–/¶`). Pour corriger cela il faut remapper la touche en utilisant Karabiner-Elements et dans l'onglet « Simple modifications » ajouter deux remplacements :
+La touche en haut à gauche de la disposition (`$/#`), ne fonctionne pas avec `alt` sur les claviers non Apple (impossible d'accéder aux caractères `–/¶`). 
+La correction est contenue dans le patch précédent, sinon il est possible il est possible de remapper la touche en utilisant Karabiner-Elements et dans l'onglet « Simple modifications » ajouter deux remplacements :
 
  Originale                   | Remplacement
 ----------------------------:|:------------------
