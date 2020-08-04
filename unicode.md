@@ -1,7 +1,7 @@
 Unicode characters
 ==================
 
-# Keyboard modifiers and special keys
+## Keyboard modifiers and special keys
 
 Here's a list of graphical representations of the different modifier keys (Command, Shift, Control etc). It is possible to find and view these from the Mac OS X] character palette but the huge size of the Unicode space can make this difficult unless you store such characters in your favorites list.
 
