@@ -1,13 +1,9 @@
-  //////////////////////////////////////////////////////////////////////////////
- //                                                                           //
-//                                                                            //
-//                             C++ Cheat Sheet                                //
-//                                                                            //
-//                                                                           //
-//////////////////////////////////////////////////////////////////////////////
+C++ Cheat Sheet
+===============
 
---------------------------------------------------------------[ Preprocessor ]--
+## Preprocessor
 
+```
 // Stringification:
 #define STR(s) #s
 
@@ -36,13 +32,11 @@ struct command commands[] =
   { "quit", quit_command },
   { "help", help_command }
 };
+```
 
+##  CRTP - Curiously Recurring Template Pattern
 
-
-
-
--------------------------------[ CRTP - Curiously Recurring Template Pattern ]--
-
+```
 // It's only a class deriving from a template clas spcialized with itslef.
 
 template <typename T> class Container;
@@ -51,10 +45,11 @@ class Item : public Container<Item>
 {
 
 };
+```
 
+## Singleton Base Class
 
-------------------------------------------------------[ Singleton Base Class ]--
-
+```
 // Singleton template class declaration ////////////////////////////////////////
 template <typename T>
 class Singleton
@@ -100,10 +95,11 @@ private:
     ASingleClass() {}
 
 };
+```
 
+## PIMPL
 
----------------------------------------------------------------------[ PIMPL ]--
-
+```
 // Pointer to implementation aka d-pointer, aka opaque pointer, is used
 // to deport the implementation of the data structure of a class to the .cpp
 // file, making it invisible when used as a library and _binary compatible_
@@ -150,14 +146,14 @@ Handle &Hendle::operator=(Handle other_)
     std::swap(*this, other_);
     return *this;
 }
+```
 
-  [ links ]
-    http://en.wikipedia.org/wiki/Opaque_pointer
+### links
+http://en.wikipedia.org/wiki/Opaque_pointer
 
--------------------------------------------------------[ Copy and Swap Idiom ]--
+## Copy and Swap Idiom
 
-//
-
+```
 class Thing
 {
     Thing() {}
@@ -185,15 +181,15 @@ class Thing
         // for each data member do: swap(a._item, b._item);
     }
 };
+```
+
+### links
+http://stackoverflow.com/questions/3279543
 
 
-  [ links ]
-    http://stackoverflow.com/questions/3279543
+### ADL - Argument Dependent Lookup
 
-
--------------------------------------------[ ADL - Argument Dependent Lookup ]--
-
-
+```
 // ADL applies to the lookup of an unqualified function name depending on the
 // types of the arguments given to the function call.
 //   eg:
@@ -208,8 +204,9 @@ int main()
     NS::A *a;
     f( a, 0 );    //calls NS::f
 }
+```
 
-  [ links ]
-    http://en.wikipedia.org/wiki/Argument-dependent_name_lookup
+### links
+http://en.wikipedia.org/wiki/Argument-dependent_name_lookup
 
 

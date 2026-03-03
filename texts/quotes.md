@@ -2,7 +2,7 @@ Petit recueil de citations et de bons mots
 ==========================================
 
 
->   Faudrait leur faire pareil et les payer avec une monnaie virtuelle DRMisé
+> Faudrait leur faire pareil et les payer avec une monnaie virtuelle DRMisé
 > qui interdirait de changer l'argent de compte bancaire plus d’une fois.
 
  - source: [commentaire chez Korben][1]
@@ -12,20 +12,20 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   On utilise `/usr/local/bin` pour les applications partagées sur le réseau.
+> On utilise `/usr/local/bin` pour les applications partagées sur le réseau.
 
  - source: CEA
  - tags: geek, dev, linux, filesystem, fhs
 
 ---
 
->   La liberté n'a de sens que pour ceux qui en ont les moyens.
+> La liberté n'a de sens que pour ceux qui en ont les moyens.
 
  - tags: liberté, philo
 
 ---
 
->   Une conspiration c'est un réseau d'individus qui se partagent de façon
+> Une conspiration c'est un réseau d'individus qui se partagent de façon
 > exclusive des informations, pour leur bénéfice et au détriment de eux qui
 > n'y ont pas accès.
 
@@ -36,7 +36,7 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   On a réussi à parachever la déséducation lorsqu'une fois diplômé, un
+> On a réussi à parachever la déséducation lorsqu'une fois diplômé, un
 > individu n'a plus ni jugement critique, ni capacité créative.
 
  - source: [La déséducation][1]
@@ -68,8 +68,7 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   C’est triste, mais même la démocratie passe son temps à porter au pouvoir
-> des gens qui ont une peur panique de la liberté du peuple.
+> C’est triste, mais même la démocratie passe son temps à porter au pouvoir des gens qui ont une peur panique de la liberté du peuple.
 
  - source: [Jean-Noël Lafargue][1]
  - tags: démocaratie, politique
@@ -78,18 +77,17 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   He who breaks a thing to find out what it is, has left the path of wisdom.
+> He who breaks a thing to find out what it is, has left the path of wisdom.
 
  - source: _The Lord Of The Rings_, J.R.R. Tolkien — Gandalf
  - tags: philo
 
 ---
 
->   On two occasions I have been asked (by members of Parliament): 'Pray, 
+> On two occasions I have been asked (by members of Parliament): “Pray, 
 > Mr.  Babbage, if you put into the machine wrong figures, will the right 
-> answers come out?'
-> I am not able rightly to apprehend the kind of confusion of ideas that could 
-> provoke such a question.
+> answers come out?”
+> I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.
 
  - source: [Charles Babbage][1]
  - tags: philo
@@ -98,7 +96,7 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   Any if-statement is a goto. As are all structured loops.
+> Any if-statement is a goto. As are all structured loops.
 > And sometimes structure is good ; when it’s good, you should use it.
 > And sometimes structure is _bad_, and gets into the way, and using a goto
 > is just much clearer.
@@ -108,9 +106,8 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   Debugging is twice as hard as writing the code in the first place. 
-> Therefore, if you write the code as cleverly as possible, you are, by 
-> definition, not smart enough to debug it.
+> Debugging is twice as hard as writing the code in the first place. 
+> Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
 
   - source: [Brian W. Kernighan][1]
   - tags: programming
@@ -119,8 +116,7 @@ Petit recueil de citations et de bons mots
   
 ---
 
->   The trouble with programmers is that you can never tell what a programmer is 
-> doing until it’s too late.
+>   The trouble with programmers is that you can never tell what a programmer is doing until it’s too late.
 
   - source: [Seymour Cray][1]
   - tags: programming
@@ -138,8 +134,8 @@ Petit recueil de citations et de bons mots
 
 ---
 
->   Always code as if the guy who ends up maintaining your code will be a 
-> violent psychopath who knows where you live."
+> Always code as if the guy who ends up maintaining your code will be a 
+> violent psychopath who knows where you live.
   
   - source: [Martin Golding][1]
   - tags: programming
@@ -205,7 +201,7 @@ keep it set on 'more magic'.
 
 ---
 
->   XML is like violence: if it doesn't solve your problem, you are not using
+> XML is like violence: if it doesn't solve your problem, you are not using
 > enough of it.
 
 ---
@@ -216,8 +212,7 @@ keep it set on 'more magic'.
 
 Margaret Thatcher
 
->   L'homme supérieur demande tout à lui-même  ; l'homme vulgaire demande 
-> tout aux autres.
+>   L'homme supérieur demande tout à lui-même  ; l'homme vulgaire demande tout aux autres.
 
 Confucius
 
@@ -225,22 +220,22 @@ Confucius
 
 Edgar Faure
 
->   Many of life's failures are people who did not realize how close they were 
+> Many of life's failures are people who did not realize how close they were 
 > to success when they gave up.
 
 Thomas A. Edison
 
->   La tentative de meurtre a manqué son effet en raison d'un évènement 
+> La tentative de meurtre a manqué son effet en raison d'un événement 
 > indépendant de sa volonté, en l'espèce, la survie de la victime.
 
 Inconnu
 
->   Vouloir être toujours dans le vent c'est avoir l'ambition d'une feuille 
+> Vouloir être toujours dans le vent c'est avoir l'ambition d'une feuille 
 > morte.
 
 Inconnu
 
->   Tout bien que tu détiens est un souci qui te retiens.
+> Tout bien que tu détiens est un souci qui te retiens.
 
 Inconnu
 
@@ -251,3 +246,5 @@ Omnes vulnerant, ultima necat
 Omnia dicta fortiora si dicta Latina 
     « Un propos prend plus de force lorsqu'il est dit en latin. »
 
+Etiam si omnes, ego non
+	« Même si tous, moi pas »

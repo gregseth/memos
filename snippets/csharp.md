@@ -1,43 +1,38 @@
-  //////////////////////////////////////////////////////////////////////////////
- //                                                                           //
-//                                                                            //
-//                              C# Cheat Sheet                                //
-//                                                                            //
-//                                                                           //
-//////////////////////////////////////////////////////////////////////////////
-
-
+C# Cheat Sheet
+==============
 Conversion of an unmanaged to a managed array of structs
 --------------------------------------------------------
 
-  /// <summary>
-  /// Méthode générique de conversion d'un pointeur sur une liste de
-  /// structures non managées, en un tableau managé de structures.
-  /// </summary>
-  /// <typeparam name="Struct">Le type de la structure</typeparam>
-  /// <param name="_P">Le pointeur vers le premier élément du tableau
-  /// non managé.</param>
-  /// <param name="_Size">La taille du tableau non managé.</param>
-  /// <returns>Le tableau managé contenant les structures.</returns>
-  Struct[] PtrToStructArray<Struct>(IntPtr _P, int _Size)
+```
+/// <summary>
+/// Méthode générique de conversion d'un pointeur sur une liste de
+/// structures non managées, en un tableau managé de structures.
+/// </summary>
+/// <typeparam name="Struct">Le type de la structure</typeparam>
+/// <param name="_P">Le pointeur vers le premier élément du tableau
+/// non managé.</param>
+/// <param name="_Size">La taille du tableau non managé.</param>
+/// <returns>Le tableau managé contenant les structures.</returns>
+Struct[] PtrToStructArray<Struct>(IntPtr _P, int _Size)
+{
+  int nStructSize = Marshal.SizeOf(typeof(Struct));
+  Struct[] array  = new Struct[_Size];
+  IntPtr pWalker  = _P;
+
+  for (int i=0; i<_Size; i++)
   {
-    int nStructSize = Marshal.SizeOf(typeof(Struct));
-    Struct[] array  = new Struct[_Size];
-    IntPtr pWalker  = _P;
-
-    for (int i=0; i<_Size; i++)
-    {
-      array[i] = (Struct)Marshal.PtrToStructure(pWalker, typeof(Struct));
-      pWalker  += nStructSize;
-    }
-
-    return array;
+    array[i] = (Struct)Marshal.PtrToStructure(pWalker, typeof(Struct));
+    pWalker  += nStructSize;
   }
 
+  return array;
+}
+```
 
 Boxing and unboxing of arrays (.NET 4)
 --------------------------------------
 
+```
   class Util
   {
 
@@ -132,3 +127,4 @@ Boxing and unboxing of arrays (.NET 4)
       return oObjected;
     }
   }
+```
