@@ -1,5 +1,3 @@
-Irssi
-=====
 
 Action                          | Command                 | Shortcut
 ------------------------------- | ----------------------- | ----------------
@@ -20,4 +18,3 @@ Resize current window           | /win grow [lines#]      |
                                 | /win size lines#        | 
 Once splitted, move window      | /window move up         | 
                                 | /win[dow] move down     |    
-

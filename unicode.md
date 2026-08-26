@@ -1,5 +1,4 @@
-Unicode characters
-==================
+# Unicode characters
 
 ## Keyboard modifiers and special keys
 

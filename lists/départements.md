@@ -1,5 +1,4 @@
-Départements
-============
+# Départements
 
 - 01 - Ain
 - 02 - Aisne

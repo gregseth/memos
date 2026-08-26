@@ -1,285 +1,201 @@
-Shell Fu
-========
+# Useful commands
 
-Useful commands
----------------
-
-### *nix
-
-    script <filename>
-
+## \*nix
 Saves everything output in the console in the file, until EOT (^D).
-
-    cd -
-
-Go to previous directory (not the parent one like cd ..).
-
-    C-l
-
-The same as `clear`: cleans the console.
-
-    tac
-
-The same as `cat` but in reverse order (from the las line of the file).
-
-    dialog
+```bash
+script <filename>
+```
 
 Creates a GUI like environment. See man page.
-
-    nc -lp PORT
-
-Listens to the PORT, and outputs everything sent to it to stdout.
-
-    nc -l PORT < index.htm
+```bash
+dialog
+```
 
 Creates a mini webserver, serving only index.htm
-
-    nc HOST PORT
-
-Send the stdin to the HOST:PORT.
-
-    ^err^new
-
-Replaces 'err' by 'new' in the previous entry.
-
-    pgrep <processname>
-
-PID of the processus named processname.
-
-    C-r + start typing
-
-Search the history
-
-    watch -d <command>
-
-Executes command every 2sec (can be changed with --interval=secs) and show
-the differences in the output.
-
-    reset
-
-Cleans the term, when binary output messed the thing up.
-
-    lsof
-
-List open files (and by which process).
-
-    tr "[:upper:]" "[:lower:]"
-
-Convert uppsercase character to lowercase.
-
-    iconv
-
-Convert charsets
-
-    | wc -m
-
-String length, see manpage for line or byte count.
-
-    expr length <string>
+```bash
+nc -l PORT < index.htm
+```
 
 Gives the length of the string. See: ${#var}.
-
-    echo "ibase=xx; obase=yy; Z" | bc
+```bash
+expr length <string>
+```
 
 Convert Z from base xx to base yy.
+```bash
+echo "ibase=xx; obase=yy; Z" | bc
+```
 
-    mkdir -p path/to/{dir1,dir2,.../{dir1,Dir2}}
-
-Creates the whole tree.
-
-    {n..m}
-
-Is equivalent to $(seq n m), can be zero-padded. eg: {001..100}
-
-    rename "s/<regex>/<repl>/" <files>
-
-Batch rename files with regexes.
-
-    fmt -<n> -s <file>
-
-Reformats the content of <file> to <n> columns width.
-
-    true, :, false
-
-Does noting, and respectively returns 0, 0 and 1.
-
-    ssh -L local-port:address:port ssh-server
+Reformat the content of *file* to *n* columns width.
+```bash
+fmt -<n> -s <file>
+```
 
 Redirects local-port on localhost to port on address.
-
-    ssh -R remote-port:address:port ssh-server
+```bash
+ssh -L local-port:address:port ssh-server
+```
 
 Redirects remote-port on ssh-server to port on address.
+```bash
+ssh -R remote-port:address:port ssh-server
+```
 
-    echo <dir1> ... <dirN> | xargs -n 1 cp <file>
+Copy *file* to each directory echoed.
+```bash
+echo <dir1> ... <dirN> | xargs -n 1 cp <file>
+```
 
-Copies file to each directory echoed.
+Open a dialog to create a new desktop shortcut. 
+```bash
+gnome-desktop-item-edit --create-new <dir>
+```
 
-    \command
+Here's a template for manually creating a `.desktop` file (must have `+x` permissions):
+```ini
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=X.Y.Z
+Name=MyApp
+GenericName=TextEditor
+Type=Application
+Icon=/path/to/icon.png
+Exec=/path/to/exe
+Path=/path/to/execution/dir
+Terminal=false
+```
 
-Run command, unaliased
-
-    gnome-desktop-item-edit --create-new <dir>
-
-Opens dialog to create a new desktop shortcut. Here's a template for
-manually creating a .desktop file (must have +x permissions):
-
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Version=X.Y.Z
-    Name=MyApp
-    GenericName=TextEditor
-    Type=Application
-    Icon=/path/to/icon.png
-    Exec=/path/to/exe
-    Path=/path/to/execution/dir
-    Terminal=false
-
-
-### OS X
-
-    sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
+## OS X
 
 Print a list of the files ignored by Time Machine.
-
-    nettop
+```bash
+sudo mdfind "com_apple_backup_excludeItem = 'com.apple.backupd'"
+```
 
 View the live netowrk traffic. Use 'c' to view collapse processes, 'd' to
 see the delta and not the cumulative values and 'p' to show human readable
 values. 'q' to quit.
-
-    sudo nvram SystemAudioVolume=%XX
-    sudo nvram -d SystemAudioVolume
+```bash
+nettop
+```
 
 Sets the volume of the BANG on startup to XX%, resp. resets it to its
 default value.
-
-    defaults write com.apple.notificationcenterui bannerTime SECONDS
-    defaults delete com.apple.notificationcenterui bannerTime
+```bash
+sudo nvram SystemAudioVolume=%XX
+sudo nvram -d SystemAudioVolume
+```
 
 Sets the delay to SECONDS for notifications, resp. resets to default time.
-
-    chflags [no]hidden FILE
+```bash
+defaults write com.apple.notificationcenterui bannerTime SECONDS
+defaults delete com.apple.notificationcenterui bannerTime
+```
 
 (Un)sets the hidden flag on FILE. The file is invisible in the Finder but
 still present and accessble through its name. Hiding a file may have
 side-effects such as preventing overwriting.
-
-    sqlite3 "~/Library/Application Support/Dock/A04B2AC4-BFE4-421F-9C1A-EB823C63684A.db" \
-    "DELETE from apps; DELETE from groups WHERE title<>''; DELETE from items WHERE rowid>2;" \
-    && killall Dock
+```bash
+chflags [no]hidden FILE
+```
 
 Cleans the Launchpad database.
-
-    xcodebuild -list -project <PROJECT.xcodeproj>
-    xcodebuild -scheme <SCHEME> [build]
+```bash
+sqlite3 "~/Library/Application Support/Dock/A04B2AC4-BFE4-421F-9C1A-EB823C63684A.db" \
+"DELETE from apps; DELETE from groups WHERE title<>''; DELETE from items WHERE rowid>2;" \
+&& killall Dock
+```
 
 Lists avialable schemes, then compile the project.
-
-    mdls -name kMDItemVersion /path/to/Application.app
+```bash
+xcodebuild -list -project <PROJECT.xcodeproj>
+xcodebuild -scheme <SCHEME> [build]
+```
 
 Return the version number for that application.
-
-    security -v unlock-keychain ~/Library/Keychains/login.keychain
+```bash
+mdls -name kMDItemVersion /path/to/Application.app
+```
 
 Unlocks the keychain from command line.
+```bash
+security -v unlock-keychain ~/Library/Keychains/login.keychain
+```
 
-
-### Windows
-
-    mklink [/D] LNK TARGET
+## Windows
 
 Creates a symlink of TARGET to LNK. Use /D for directories.
-
-    icacls * /reset /t
+```
+mklink [/D] LNK TARGET
+```
 
 Restore authorisations of all files and directories (recursively) in the
 current directory.
-
-    echo | set /p=TEXT
+```
+icacls * /reset /t
+```
 
 Prints TEXT without the trailing [CR][LF].
-
-    msizap T {PRODUCT_CODE}
+```
+echo | set /p=TEXT
+```
 
 Force deletion of the product from the MSI database. See help for more options.
-
-    control userpasswords2
+```
+msizap T {PRODUCT_CODE}
+```
 
 Uncheck the box "Users must enter a password to open a session" in order to
 enable auto-login.
-
-    Restart-Computer / Stop-Computer
+```
+control userpasswords2
+```
 
 Powershell commands (quite self-explanatory).
-
-    corflags ASSEMBLY
+```
+Restart-Computer / Stop-Computer
+```
 
 Tells if a .NET assembly is 32 or 64 bits. The results are to be interpreted
-with the following chart:
+with the following chart.
+
+```
+corflags ASSEMBLY
+```
 
  Option    | PE    | 32BIT
 :----------|:------|:--------
  x86       | PE32  | 1
  Any CPU   | PE32  | 0
  x64       | PE32+ | 0
-
-
-SETUID, SETGID & sticky bit
----------------------------
-
-### On executatble files
-
+ 
+# SETUID, SETGID & sticky bit
+## On executatble files
   - SETUID: Allows any user to run the file as the owner.
   - SETGID: Allows any user to run the file as the owner's group.
   - Sticky bit: Makes the program stay in memory after execution. -- Not really
       used anymore.
-
-### On directories
-
+## On directories
   - SETUID: N/A
   - SETGID: Any file created inside the directory belong to the group of
       the directory.
   - Sticky bit: Only the owner of a file in that directory can delete it.
-
-### Chmod
-
+## Chmod
 In octal notation, SETUID=4, SETGID=2 and sticky=1. They prefix the classic
 notation: rwsr-sr-x gives 6755.
 If the bit are set, but there's no execution rights, they appear as capitalised:
 rwSr-Sr-T (7644).
 
+# Scripting
+## Know where you are
+In a script, get the full path of the script. The BASH_SOURCE is used instead of
+`$0` to work both when script is executed or sourced.
 
-Scripting
----------
-
-### Know where you are
-
-In a script, get the full path of the script. The BASH_SOURCE is used insteal of
-$0 to work both when script is executed or sourced.
-
-    PATH=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)
-    FILE=$(`basename "${BASH_SOURCE[0]}")
-
-
-### Heredoc
-
-The HEREDOC syntax allows to inline the content of a file in a command line
-or a script. The syntax is the following:
-
-    <some command> << END_TEXT
-    <multiline unescaped text goes here>
-    END_TEXT
-
-END_TEXT is used as the delimiting identifier the "file" goes on until the
-identifier is found by itself on a separate line. Appending a minus sign to the
-<< has the effect that leading tabs (not spaces) are ignored. By default,
-variables are interpolated and commands in backticks are evaluated. This can be
-disabled by quoting the identifier.
-
-Windows batch
--------------
-
+```bash
+PATH=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)
+FILE=$(`basename "${BASH_SOURCE[0]}")
+```
+## Windows batch
  Batch        | Unix eq.   | Description
 :-------------|:-----------|:----------
  `%n`         | `$n`       | The n'th parametr of the function (0-indexed).
@@ -296,62 +212,13 @@ Notice that in a batch the % sign before the variable name must be doubled (to
 avoid confusion with paramters, sic!) and that the variable name must be a 
 single letter.
 
+# ZSH
+| Expression           | Description                                                                              |
+| :------------------- | :--------------------------------------------------------------------------------------- |
+| `${(l:n::f::e:)var}` | Prints `$var`, left padded on n-width with `f`. The padding is optionally ended by `e`.  |
+| `${(r:n::f::e:)var}` | Prints `$var`, right padded on n-width with `f`. The padding is optionally ended by `e`. |
 
-Special vars
-------------
-
- Variable      |Description
-:--------------|:----------
- `!#`          |Current command line (can be combined with others, eg: `!#$`).
- `!!`          |Last command line.
- `!$`          |Last argument of last command line.
- `!^`          |First argument of last command line.
- `!*`          |All arguments of last command line.
- `!:n`         |n-th word of last command line (n=0 is the command name).
- `!:n-m`       |n-th to m-th word of last command line.
- `!:^`         |First word of last command line.
- `!:$`         |Last word of last command line.
- `!cmd`        |Runs the most recent command starting with cmd.
- `!cmd:p`      |Prints the most recent command starting with cmd.
- `!cmd:s/m/r/` |Runs the most recent command starting with cmd replacing m by r.
- `!?match`     |Runs the most recent command that contains match.
- `$n`          |The n-th parameter (0 is the command, 1 is the 1st parameter).
- `$*`          |All the parameters in one string (`"$1 $2 … $n"`).
- `$@`          |All the parameters in n strings (`"$1" "$2" … "$n"`).
- `$#`          |The number of parameters of the command.
- `$?`          |The return code of the last comand.
- `$-`          |The parameters used at shell launch.
- `$$`          |PID of the shell in which the command is executed.
- `$!`          |PID of the last background command (started with & or C-Z ; bg).
- `$_`          |Last command or parameter typed.
- `${#var}`     |Length of `$var`
- `${=var}`     |Splits `$var` into words.
- `${var[:]-word}`       |Returns `$var` if var is set [non null] else word.
- `${var[:]+word}`       |Returns word if var is set [non null] else nothing.
- `${var#[#]match}`      |Deletes the shortest [longest] matching part (beg).
- `${var%[%]match}`      |Deletes the shortest [longest] matching part (end).
- `${var/[/]match/repl}` |Replaces the first [all the] matching parts by repl.
- `$'\t'`       |Litteral escaped character
-
-ZSH
----
-
- Expression                | Description
-:--------------------------|:-----------
- `${(l:n::f::e:)var}`      | Prints `$var`, left padded on n-width with f. The
-                           | padding is optionnally ended by `e.
- `${(r:n::f::e:)var}`      | Prints `$var`, right padded on n-width with f. The
-                           | padding is optionnally ended by e.
- `$var:[g]s/match/repl[/]` | Replaces match by repl in `$var`
- `$var:t`                  | If `$var` is a path, ouputs the dirpath.
- `$var:h`                  | If `$var` is a path, ouputs the filename.
- `$var:l`                  | To lowercase
- `$var:u`                  | To uppercase
- `${+var}`                 | Returns 1 if `$var` is set else 0.
-
-
-Terminfo alternate character set (ACS)
---------------------------------------
+# Terminfo alternate character set (ACS)
 
 Use `$terminfo[smacs]` to enable the ACS, and `$terminfo[rmacs]` to disable it.
 The characters are available in `$terminfo[acsc]` as an inline list of key/value
@@ -359,52 +226,52 @@ pairs the key being the ASCII char, and the value the corresponding char
 to escape. It can be retreived as a ZSH associative array (named ACS here) 
 as follows:
 
-    typeset -A ACS
-    set -A ACS ${(s..)terminfo[acsc]}
+```bash
+typeset -A ACS
+set -A ACS ${(s..)terminfo[acsc]}
+```
 
   The following snippet shows how to print the equivalency table (depends on
   your term and and the font you're using):
 
-    for l in $ACS
-    do
-      echo "$l ($ACS[$l]) : $terminfo[smacs]${ACS[$l]:--}$terminfo[rmacs]"
-    done
+```bash
+for l in $ACS
+do
+  echo "$l ($ACS[$l]) : $terminfo[smacs]${ACS[$l]:--}$terminfo[rmacs]"
+done
 
-    w (w) : ┬
-    f (f) : °
-    x (x) : │
-    g (g) : ±
-    y (y) : ≤
-    z (z) : ≥
-    i (i) : ␋
-    { ({) : π
-    j (j) : ┘
-    | (|) : ≠
-    k (k) : ┐
-    } (}) : £
-    l (l) : ┌
-    ~ (~) : ·
-    m (m) : └
-    n (n) : ┼
-    o (o) : ⎺
-    p (p) : ⎻
-    q (q) : ─
-    ` (`) : ◆
-    r (r) : ⎼
-    a (a) : ▒
-    s (s) : ⎽
-    t (t) : ├
-    u (u) : ┤
-    v (v) : ┴
+w (w) : ┬
+f (f) : °
+x (x) : │
+g (g) : ±
+y (y) : ≤
+z (z) : ≥
+i (i) : ␋
+{ ({) : π
+j (j) : ┘
+| (|) : ≠
+k (k) : ┐
+} (}) : £
+l (l) : ┌
+~ (~) : ·
+m (m) : └
+n (n) : ┼
+o (o) : ⎺
+p (p) : ⎻
+q (q) : ─
+` (`) : ◆
+r (r) : ⎼
+a (a) : ▒
+s (s) : ⎽
+t (t) : ├
+u (u) : ┤
+v (v) : ┴
+```
 
 
-ANSI special chars
-------------------
-
+# ANSI special chars
 ### Font formatting
-
 These can be set by echoing `\e[#m<custom_text>\e[0m`
-
    - `\e` is the ANSI escape code (usually `\e == \033`)
    - `#` is in the form `n;m` with `n` the code for the foreground color, and 
        `m` the code for the background color:
@@ -437,8 +304,7 @@ These can be set by echoing `\e[#m<custom_text>\e[0m`
  pink         |  95   | 105
  turquoize    |  96   | 106
  white        |  97   | 107
-
-### ANSI cursor positioning
+## ANSI cursor positioning
 
  Code      | Name | Effect
 :----------|:-----|:------
@@ -463,10 +329,7 @@ These can be set by echoing `\e[#m<custom_text>\e[0m`
  `\e[nT`   | SD   | Scrolls the page by n lines down 
  `\e[s`    | SCP  | Saves cursor position
  `\e[u`    | RCP  | Restores cursor position
-
-
-Manpages number
----------------
+#  Manpage numbers
 
  Section  | Topic
 ---------:|:----------------------------------------------------
@@ -478,9 +341,7 @@ Manpages number
  6        | Games.
  7        | Word processing packages.
  8        | System administration commands and procedures.
-
-Shortcuts
----------
+# Shortcuts
 
  Command | Description
 :--------|:------------------------------------------------------------------

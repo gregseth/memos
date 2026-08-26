@@ -1,9 +1,6 @@
-C# Cheat Sheet
-==============
-Conversion of an unmanaged to a managed array of structs
---------------------------------------------------------
-
-```
+# C# Cheat Sheet
+## Conversion of an unmanaged to a managed array of structs
+```csharp
 /// <summary>
 /// Méthode générique de conversion d'un pointeur sur une liste de
 /// structures non managées, en un tableau managé de structures.
@@ -28,103 +25,100 @@ Struct[] PtrToStructArray<Struct>(IntPtr _P, int _Size)
   return array;
 }
 ```
+## Boxing and unboxing of arrays (.NET 4)
+```csharp
+class Util
+{
 
-Boxing and unboxing of arrays (.NET 4)
---------------------------------------
-
-```
-  class Util
+  public static Array GetArrayAs(Type t_, Array array_)
   {
+    int iDimensions = array_.Rank;
+    int[] iSizes    = new int[iDimensions];
+    int iCount      = array.Length;
 
-    public static Array GetArrayAs(Type t_, Array array_)
+    for (int i=0; i<iDimensions; ++i)
     {
-      int iDimensions = array_.Rank;
-      int[] iSizes    = new int[iDimensions];
-      int iCount      = array.Length;
-
-      for (int i=0; i<iDimensions; ++i)
-      {
-        iSizes[i] = array.GetLength(i);
-      }
-
-      var aArray      = Array.CreateInstance(t_, iSizes);
-      int[] iIndexes  = new int[iDimensions];
-
-      for (int i=0; i<iCount; ++i)
-      {
-        int iDivider = 1;
-        for (int j=0; j<iDimensions; ++j)
-        {
-          iIndexes[j] = i / iDivider % iSizes[j];
-          iDivider *= iSizes[j];
-        }
-
-        aArray.SetValue(array_.GetValue(iIndexes), iIndexes);
-      }
-
-      return aArray;
+      iSizes[i] = array.GetLength(i);
     }
 
-    public static dynamic Unbox(object o_)
+    var aArray      = Array.CreateInstance(t_, iSizes);
+    int[] iIndexes  = new int[iDimensions];
+
+    for (int i=0; i<iCount; ++i)
     {
-      dynamic dUnboxed = o_;
-
-      if (o_.GetType().IsArray)
+      int iDivider = 1;
+      for (int j=0; j<iDimensions; ++j)
       {
-        Array array             = (Array)o_;
+        iIndexes[j] = i / iDivider % iSizes[j];
+        iDivider *= iSizes[j];
+      }
 
-        bool bIsEmpty           = true;
-        bool bHasNullElement    = false;
-        bool bHasHomogenousType = true;
-        Type type               = null;
+      aArray.SetValue(array_.GetValue(iIndexes), iIndexes);
+    }
 
-        foreach (object item in array)
+    return aArray;
+  }
+
+  public static dynamic Unbox(object o_)
+  {
+    dynamic dUnboxed = o_;
+
+    if (o_.GetType().IsArray)
+    {
+      Array array             = (Array)o_;
+
+      bool bIsEmpty           = true;
+      bool bHasNullElement    = false;
+      bool bHasHomogenousType = true;
+      Type type               = null;
+
+      foreach (object item in array)
+      {
+        bIsEmpty = false;
+
+        if (item == null)
         {
-          bIsEmpty = false;
-
-          if (item == null)
-          {
-            bHasNullElement = true;
-            break;
-          }
-          else
-          {
-            if (type == null)
-            {
-              type = item.GetType();
-            }
-            else if (type != item.GetType())
-            {
-              bHasHomogenousType = false;
-              break;
-            }
-
-          }
-        }
-
-        if (!bIsEmpty && !bHasNullElement && bHasHomogenousType)
-        {
-          dUnboxed = GetArrayAs(type, array);
+          bHasNullElement = true;
+          break;
         }
         else
         {
-          dUnboxed = null;
+          if (type == null)
+          {
+            type = item.GetType();
+          }
+          else if (type != item.GetType())
+          {
+            bHasHomogenousType = false;
+            break;
+          }
+
         }
       }
 
-      return dUnboxed;
-    }
-
-    public static object Objection(object o_)
-    {
-      object oObjected = o_;
-
-      if (o_.GetType().IsArray)
+      if (!bIsEmpty && !bHasNullElement && bHasHomogenousType)
       {
-        oObjected = GetArrayAs(typeof(object), (Array)o);
+        dUnboxed = GetArrayAs(type, array);
       }
-
-      return oObjected;
+      else
+      {
+        dUnboxed = null;
+      }
     }
+
+    return dUnboxed;
   }
+
+  public static object Objection(object o_)
+  {
+    object oObjected = o_;
+
+    if (o_.GetType().IsArray)
+    {
+      oObjected = GetArrayAs(typeof(object), (Array)o);
+    }
+
+    return oObjected;
+  }
+}
 ```

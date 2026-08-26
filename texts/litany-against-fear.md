@@ -1,5 +1,4 @@
-Litany against fear
-===================
+# Litany against fear
 
 I must not fear.  
 Fear is the mind-killer.  
@@ -9,8 +8,7 @@ I will permit it to pass over me and through me.
 And when it has gone past I will turn the inner eye to see its path.  
 Where the fear has gone there will be nothing. Only I will remain.
 
-Litanie contre la peur
-======================
+# Litanie contre la peur
 
 Je ne connaîtrai pas la peur, car la peur tue l'esprit.  
 La peur est la petite mort qui conduit à l'oblitération totale.  

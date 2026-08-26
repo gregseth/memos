@@ -1,14 +1,10 @@
-Petit recueil de citations et de bons mots
-==========================================
-
+# Petit recueil de citations et de bons mots
 
 > Faudrait leur faire pareil et les payer avec une monnaie virtuelle DRMisé
 > qui interdirait de changer l'argent de compte bancaire plus d’une fois.
 
- - source: [commentaire chez Korben][1]
- - tags: drm, monnaie, fanc, kindle
-
-  [1]: http://www.korben.info/fnac-supprimer-drm-ebook.html#comment-213610
+ - source: [commentaire chez Korben](http://www.korben.info/fnac-supprimer-drm-ebook.html#comment-213610)
+ - tags: drm, monnaie, fnac, kindle
 
 ---
 
@@ -29,20 +25,16 @@ Petit recueil de citations et de bons mots
 > exclusive des informations, pour leur bénéfice et au détriment de eux qui
 > n'y ont pas accès.
 
- - source: [Julian Assange][1]
+ - source: [Julian Assange](http://fr.readwriteweb.com/2010/12/13/a-la-une/si-wikileaks-tait-une-chance/)
  - tags: liberté, philo, conspiration, wikileaks
-
-  [1]: http://fr.readwriteweb.com/2010/12/13/a-la-une/si-wikileaks-tait-une-chance/
 
 ---
 
 > On a réussi à parachever la déséducation lorsqu'une fois diplômé, un
 > individu n'a plus ni jugement critique, ni capacité créative.
 
- - source: [La déséducation][1]
+ - source: [La déséducation](http://http://ladeseducation.ca/la-deseducation/)
  - tags: liberté, philo, éducation
-
-  [1]: http://http://ladeseducation.ca/la-deseducation/
 
 ---
 
@@ -61,19 +53,15 @@ Petit recueil de citations et de bons mots
 > rejette implicitement dans le camp des fainéants ou des inaptes, tous ceux
 > qui ne prennent pas le train de la technologie.
 
- - source: [Cyrille Frank][1]
+ - source: [Cyrille Frank](http://www.mediaculture.fr/2010/09/04/nouveaux-medias-une-nouvelle-classe-dominante/)
  - tags: web2.0, politique, libéralisme, évolution
-
-  [1]: http://www.mediaculture.fr/2010/09/04/nouveaux-medias-une-nouvelle-classe-dominante/
 
 ---
 
 > C’est triste, mais même la démocratie passe son temps à porter au pouvoir des gens qui ont une peur panique de la liberté du peuple.
 
- - source: [Jean-Noël Lafargue][1]
+ - source: [Jean-Noël Lafargue](http://www.hyperbate.com/dernier/?p=14453)
  - tags: démocaratie, politique
-
-  [1]: http://www.hyperbate.com/dernier/?p=14453
 
 ---
 
@@ -89,10 +77,8 @@ Petit recueil de citations et de bons mots
 > answers come out?”
 > I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.
 
- - source: [Charles Babbage][1]
+ - source: [Charles Babbage](http://stackoverflow.com/questions/5725487/why-put-a-on-functions-that-return-a-struct-pointer)
  - tags: philo
-
-  [1]: http://stackoverflow.com/questions/5725487/why-put-a-on-functions-that-return-a-struct-pointer
 
 ---
 
@@ -109,42 +95,34 @@ Petit recueil de citations et de bons mots
 > Debugging is twice as hard as writing the code in the first place. 
 > Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
 
-  - source: [Brian W. Kernighan][1]
+  - source: [Brian W. Kernighan](http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html)
   - tags: programming
-  
-  [1]: http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html
   
 ---
 
 >   The trouble with programmers is that you can never tell what a programmer is doing until it’s too late.
 
-  - source: [Seymour Cray][1]
+  - source: [Seymour Cray](http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html)
   - tags: programming
-  
-  [1]: http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html
 
 ---
 
 >   To iterate is human, to recurse divine.
   
-  - source: [L. Peter Deutsch][1]
+  - source: [L. Peter Deutsch](http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html)
   - tags: programming
-  
-  [1]: http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html
 
 ---
 
 > Always code as if the guy who ends up maintaining your code will be a 
 > violent psychopath who knows where you live.
   
-  - source: [Martin Golding][1]
+  - source: [Martin Golding](http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html)
   - tags: programming
-  
-  [1]: http://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html
 
 ---
 
-### A Story About 'Magic'
+## A Story About 'Magic'
 
   Some years ago, I was snooping around in the cabinets that housed the MIT AI 
 Lab's PDP-10, and noticed a little switch glued to the frame of one cabinet. It 
@@ -206,7 +184,7 @@ keep it set on 'more magic'.
 
 ---
 
-### En Vrac
+## En Vrac
 
 >   Le socialisme ne dure que jusqu'à ce que se termine l'argent des autres.
 
@@ -239,6 +217,11 @@ Inconnu
 
 Inconnu
 
+> R4 is red, R2 is blue, if I were the force, I’d be with you
+
+Inconnu
+
+## Latin
 
 Omnes vulnerant, ultima necat 
     « Toutes blessent, la dernière tue. » Formule affichée sur les cadrans d'horloge et les cadrans solaires en référence aux heures qui passent.

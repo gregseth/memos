@@ -1,16 +1,9 @@
-
-Clavier Bépo
-============
-
+# Clavier Bépo
 ## Version 1.1
-
 La version 1.1 a introduit deux changements « inacceptables » par rapport à la version 1.0 :
-
   - l'inversion de l'apostrophe droite `'` et typographique `’` ;
   - le remplacement de l'espace insécable (`shift+espace`) par l'espace fine insécable, l'espace insécable étant désormais accessible avec `shift+alt+espace`.
-
 L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.1.bundle/Contents/Resources/bepo.keylayout` permet de rétablir la disposition de la version 1.0 pour ces caractères.
-
 ```diff
 --- /Users/seth/Desktop/bepo 1.1.bundle/Contents/Resources/bepo.keylayout   2019-04-30 12:10:22.000000000 
 +++ /Library/Keyboard Layouts/bepo 1.1.bundle/Contents/Resources/bepo.keylayout 2020-04-02 22:17:46.000000000 
@@ -243,11 +236,8 @@ L'application du patch suivant sur le fichier `/Library/Keyboard Layouts/bepo 1.
             <when state="breveinverse" output="̑"/>
             <when state="caron" output="̌"/>
             <when state="cedille" output="̧"/>
-
 ```
-
 ## Utilisation d'un clavier non Apple sur macOS
-
 La touche en haut à gauche de la disposition (`$/#`), ne fonctionne pas avec `alt` sur les claviers non Apple (impossible d'accéder aux caractères `–/¶`). 
 La correction est contenue dans le patch précédent, sinon il est possible il est possible de remapper la touche en utilisant Karabiner-Elements et dans l'onglet « Simple modifications » ajouter deux remplacements :
 
@@ -255,10 +245,7 @@ La correction est contenue dans le patch précédent, sinon il est possible il e
 ----------------------------:|:------------------
  grave_accent_and_tilde (`)  | non_us_backslash
  international1              | backslash (`\`)
-
 ### Clavier Ergodox EZ Shine
-
-
 #### Modes de rétroéclairage
 
 Type            | Modes | Teinte | Luminosité
@@ -274,9 +261,7 @@ Red/green alt   |     1 |  no | yes
 Rainbow         |    10 | yes | yes
 RGB blink       |     1 |  no |  no
 Left/right blink|     1 | yes | yes
-
 ### Clavier WASD
-
 #### Positions des cavaliers
 
  Cavalier | Positon | Description
@@ -290,9 +275,7 @@ Left/right blink|     1 | yes | yes
   5       | On      | fn désactivé
   6       | Off     | pgm désactivé
   6       | On      | pgm activé
-
 #### Programmation de macros (séquence de touches)
-
 Limitations :
 
   - Maximum 3 touches simultanées pour la macro
@@ -315,7 +298,6 @@ S --> F
 ```
 
 Après une programmation la led1 reste sur rouge. Pour se retrouver dans un état « normal », changer la couche de raccourci, puis revenir sur la précédente.          
-
 #### Changer les touche Pn et Fn
 
 ```mermaid
@@ -330,9 +312,7 @@ K --> N
 N --> K
 N --> F
 ```
-
 #### Couleur des LED
-
 ```mermaid
 graph LR
 D(pgm+scrlk <br><i> led1+2: 3x vert</i>)
@@ -352,32 +332,28 @@ K2 --> RVB
 RVB --> S
 S --> F
 ```
-
 #### Macros enregitrées
 
- Macro               | Effet       | Couche
---------------------:|-------------|--------
- fn + Q              | couche 1    | toutes
- fn + G              | couche 2    | toutes
- fn + H              | couche 3    | toutes
- fn + F              | couche 4    | toutes
- fn + F6             | led rouge   | programme
- fn + F7             | led verte   | programme
- fn + F8             | led bleue   | programme
- capslock            | shift_l     | 1
- shift_l + capslock  | capslock    | 1
- shift_r + capslock  | capslock    | 1
- fn + P              | *pass1*     | 2
- fn + K              | *pass2*     | 2
-
+|              Macro | Effet     | Couche    |
+| -----------------: | --------- | --------- |
+|             fn + Q | couche 1  | toutes    |
+|             fn + G | couche 2  | toutes    |
+|             fn + H | couche 3  | toutes    |
+|             fn + F | couche 4  | toutes    |
+|            fn + F6 | led rouge | programme |
+|            fn + F7 | led verte | programme |
+|            fn + F8 | led bleue | programme |
+|           capslock | shift_l   | 1         |
+| shift_l + capslock | capslock  | 1         |
+| shift_r + capslock | capslock  | 1         |
+|             fn + P | *pass1*   | 2         |
+|             fn + K | *pass2*   | 2         |
 #### Remplacements Karabiner-Elements
 
  Originale      | Remplacement
 ---------------:|:---------------
  left_command   | left_option
  left_option    | left_command
-
-
 ### Clavier TypeMatrix
 
 #### Remplacements Karabiner-Elements

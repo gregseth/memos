@@ -1,8 +1,6 @@
-ASCII
-=====
+# ASCII
 
 ## Tables
-
 ```
         +------+------+        l"""""""""""""l        ...............
         |      |      |        l      l      l        :      :      :
@@ -11,9 +9,7 @@ ASCII
         +------+------+        """""""""""""""        :......:......:
 ```
 
-
 ## Art
-
 ```
                                       ,_-=(!7(7/zs_.             
                                    .='  ' .`/,/!(=)Zm.           
@@ -52,9 +48,8 @@ ASCII
 ```
 						
 ## Javascript inception
-
-```
-.<script>
+```javascript
+<script>
 eval(z='p="<"+"pre>"/* ,.oq#+     ,._, */;for(y in n="zw24l6k\
 4e3t4jnt4qj24xh2 x/* =<,m#F^    A W###q. */42kty24wrt413n243n\
 9h243pdxt41csb yz/* #K       q##H######Am */43iyb6k43pk7243nm\
