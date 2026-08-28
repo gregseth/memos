@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "equations.md",
+                "file": "shell-fu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "equations"
+              "title": "shell-fu"
             }
           }
         ]
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "equations.md",
+                "file": "shell-fu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "equations.md",
+                "file": "shell-fu.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -191,31 +191,34 @@
   },
   "active": "4eeb61dd9d9851ce",
   "lastOpenFiles": [
-    "excel.md",
-    "git.md",
-    "shell-fu.md",
     "unicode.md",
+    "lists/html-entities.md",
     "bash.md",
+    "bépo.md",
     "texts/litany-against-fear.md",
     "texts/quotes.md",
+    "texts/chipolla.md",
+    "xchange/memes.md",
+    "lists/départements.md",
+    "lists/games.md",
+    "docker.md",
+    "xchange/Untitled.canvas",
+    "xchange",
+    "excel.md",
+    "equations.md",
+    "git.md",
+    "shell-fu.md",
     "tips.md",
-    "lists/html-entities.md",
     "Untitled.base",
     "samples/boxes.md",
     "shortcuts/vi.md",
     "texts/cli.md",
     "2026-08-26.md",
-    "texts/chipolla.md",
     "pdf/Visual C++ 2008 Poster.pdf",
     "curl.md",
-    "lists/games.md",
-    "lists/départements.md",
-    "equations.md",
-    "bépo.md",
     "snippets/csharp.md",
     "snippets/cpp.md",
     "shortcuts/irssi.md",
-    "docker.md",
     "samples/figlet.md",
     "samples/ASCII.md",
     "pdf/ZenCodingCheatSheet.pdf"

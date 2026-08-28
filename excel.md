@@ -17,9 +17,9 @@ de la colonne  :
 
 Création d'une liste de validation (`Données > Validation des données`) avec
 autocomplétion (l'autocomplétion ne se fait pas lors de la saisie, mais c'est le
-contenu de la liste déroulante qui est restreint aux valeurs corresondant à la
+contenu de la liste déroulante qui est restreint aux valeurs correspondant à la
 saisie). Dans l'exemple, la liste des valeurs possibles est en colonne `A` et la
-zone de saisié validée en `B1`  :
+zone de saisie validée en `B1`  :
 
 ```excel
 =OFFSET($A:$A;MATCH($B1&"*";$A:$A;0)-1;;COUNTIF($A:$A;$B1&"*"))
